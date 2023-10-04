@@ -91,7 +91,14 @@ footer a:hover {
     color: var(--orange);
 }
 
+/* Form */
 
+.form {
+    width: 100%;
+    margin: 3% auto;
+    box-shadow: var(--smal-box-shadow);
+    border-radius: 5px;
+}
 
 
 
