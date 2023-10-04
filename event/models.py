@@ -42,7 +42,7 @@ class Event(models.Model):
 
 
 class Comment(models.Model):
-    event = models.ForeignKey(Event, on_delete=models.CASCADE, related_name='comments')
+    event = models.ForeignKey(Event, on_delete=models.CASCADE, related_name='comments', blank=True, null=True)
     name = models.CharField(max_length=80)
     email = models.EmailField()
     body = models.TextField()
@@ -50,7 +50,7 @@ class Comment(models.Model):
     approved = models.BooleanField(default=False)
 
     class Meta:
-        ordering = ['-created_on']
+        ordering = ['created_on']
 
         def __str__(self):
             return f"Comment {self.body} by {self.name}"
