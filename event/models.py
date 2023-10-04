@@ -20,6 +20,7 @@ class Event(models.Model):
     slug = models.SlugField(max_length=200, unique=True)
     description = models.TextField()
     featured_image = CloudinaryField('image', default='placeholder')
+    excerpt = models.TextField(blank=True)
     date = models.DateTimeField()
     # location = models.location()
     participant = models.ManyToManyField(User,

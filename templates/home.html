@@ -13,7 +13,7 @@
                         <div class="card-body">
                             <div class="image-container">
                                 {% if "placeholder" in event.featured_image.url %}
-                                <img class="card-img-top" src="https://images.pexels.com/photos/207896/pexels-photo-207896.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="default event image">
+                                <img class="card-img-top" src="https://images.pexels.com/photos/207896/pexels-photo-207896.jpeg" alt="default event image">
                                 {% else %}
                                 <img class="card-img-top" src="{{ event.featured_image.url }}" alt="event image">
                                 {% endif %}
@@ -21,7 +21,7 @@
                                     <p class="author">Author:</p>
                                 </div>
                             </div>
-                            <a href="#" class="event-link">
+                            <a href="{% url 'event_detail' event.slug %}" class="event-link">
                                 <h2 class="card-title">{{event.name}}</h2>
                                 <p class="card-text">{{ event.excerpt }}</p>
                             </a>
