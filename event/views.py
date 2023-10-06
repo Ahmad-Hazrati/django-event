@@ -3,6 +3,7 @@ from django.views import generic, View
 from django.http import HttpResponseRedirect
 from .models import Event, Category
 from .forms import CommentForm
+from django.contrib import messages
 
 
 class EventList(generic.ListView):
@@ -50,8 +51,16 @@ class EventDetail(View):
             comment = comment_form.save(commit=False)
             comment.post = post
             comment.save()
+            messages.add_message(
+                request, messages.SUCCESS,
+                'Your comment has been successfully added!'
+            )
         else:
             comment_form = CommentForm()
+            messages.add_message(
+                request, messages.INFO,
+                'Sorry, your comment has not been added!'
+            )
 
         return render(
             request,
@@ -73,7 +82,13 @@ class EventLike(View):
 
         if post.likes.filter(id=request.user.id).exists():
             post.likes.remove(request.user)
+            messages.add_message(
+                request, messages.INFO, 'You unliked the event!'
+            )
         else:
             post.likes.add(request.user)
+            messages.add_message(
+                request, messages.INFO, 'You liked the event!'
+            )
 
         return HttpResponseRedirect(reverse('event_detail', args=[slug]))
