@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<center>
+
+    <div class="card">
+        <div class="card-header">
+            Search Result(s)
+        </div>
+        <div class="card-body">
+            {% if search %}
+            <h5 class="card-title">You have searched for {{ search }}</h5>
+            <p class="card-text">
+                {% for event in events %}
+                <li><a href="{% url 'event_detail' event.slug %}">{{ event }}</a></li>
+                {% endfor %}
+                {% else %}
+                <li>You are not authoized to search!</li>
+                {% endif %}
+
+            </p>
+        </div>
+    </div>
+</center>
+
+
+{% endblock %}

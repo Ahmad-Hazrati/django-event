@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% load static %}
+
+{%if category_events %}
+<h1> {{ cats }} Category </h1>
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-12 mt-3 left">
+            <div class="row">
+                {% for event in category_events %}
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <div class="card-body">
+                            <div class="image-container">
+                                {% if "placeholder" in event.featured_image.url %}
+                                <img src="{% static 'images/default.jpg' %}" class="scale" alt="placeholder">
+                                {% else %}
+                                <img class="card-img-top" src="{{ event.featured_image.url }}" alt="{{ event.title }}">
+                                {% endif %}
+                                <div class="image-flash">
+                                    <p class="author">Author: {{ event.author }}</p>
+                                </div>
+                            </div>
+                            <a href="{% url 'event_detail' event.slug %}" class="post-link">
+                                <h2 class="card-title">{{event.name}}</h2>
+                                <p class="card-text">{{ event.excerpt }}</p>
+                            </a>
+                            <hr>
+                            <p class="card-text text-muted h6">{{ event.created_on}}<i class="far fa-heart"></i>
+                                {{ post.number_of_likes }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+    {% if is_paginated %}
+    <nav aria-label="Page navigation example">
+        <ul class="pagination justify-content-center">
+            {% if events.has_previous %}
+            <li class="page-item"><a class="page-link" href="?page=1">&laquo First</a></li>
+            <li class="page-item"><a class="page-link" class="page-link"
+                    href="?page={{ events.previous_page_number }}">Previous</a></li>
+            {% endif %}
+
+            {% for i in nums %}
+            <li class="page-item"><a href="?page={{ forloop.counter }}" class="page-link">
+                    {{ forloop.counter }}
+                </a></li>
+
+
+            {% endfor %}
+
+            {% if events.has_next %}
+            <li class="page-item"><a class="page-link" href="?page={{ events.next_page_number}}">Next</a></li>
+            <li class="page-item"><a class="page-link" href="?page={{ events.paginator.num_pages }}">Last &raquo</a>
+            </li>
+            {% endif %}
+        </ul>
+    </nav>
+    {% endif %}
+</div>
+{% else %}
+<div class="alert alert-danger" role="alert">
+    Sorry, there is no such category exist!
+</div>
+
+{% endif %}
+
+{% endblock %}

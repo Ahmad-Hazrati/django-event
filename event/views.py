@@ -1,9 +1,12 @@
 from django.shortcuts import render, get_object_or_404, reverse
 from django.views import generic
+from django.views.generic import ListView
 from django.contrib import messages
 from django.http import HttpResponseRedirect
-from .models import Event, Comment
+from .models import Event, Comment, Category
 from .forms import CommentForm
+# Import Pagination stuff
+from django.core.paginator import Paginator
 
 
 class EventList(generic.ListView):
@@ -13,21 +16,25 @@ class EventList(generic.ListView):
     model = Event
     queryset = Event.objects.filter(status=1).order_by('-created_on')
     template_name = 'home.html'
-    paginate_by = 6
+    paginate_by = 3
+
+    # def get_context_data(self, *args, **kwargs):
+    #     # cat_menu = Category.objects.all()
+    #     context = super(EventList, self).get_context_data(*args, **kwargs)
+    #     # context ['cat_menu'] = cat_menu
+    #     return context
+
+    # def get_context_data(self, *args, **kwargs):
+    #     category_events = Category.objects.all()
+    #     context = super(EventList, self).get_context_data(*args, **kwargs)
+    #     context['category_events'] = category_events
+    #     return context
 
 
 def event_detail(request, slug, *args, **kwargs):
     """
     A function-based view to view the detail of a post.
-    Largely the same as the class-based, but we don't have
-    different methods for GET and POST. Because it's not a
-    class, all of the extra "self" stuff is removed too.
-
-    Functionally, it's the same, but it is a bit clearer
-    what's going on. To differentiate between request methods,
-    we use request.method == "GET" or request.method == "POST"
     """
-
     queryset = Event.objects.filter(status=1)
     post = get_object_or_404(queryset, slug=slug)
     comments = post.comments.all().order_by("-created_on")
@@ -69,9 +76,7 @@ def event_detail(request, slug, *args, **kwargs):
 
 def event_like(request, slug, *args, **kwargs):
     """
-    The view to update the likes. Although it should always be
-    called using the POST method, we have still added some
-    defensive programming to make sure.
+    The view to update the likes. 
     """
     post = get_object_or_404(Event, slug=slug)
 
@@ -126,3 +131,38 @@ def comment_edit(request, slug, comment_id, *args, **kwargs):
                 messages.ERROR, 'Error updating comment!')
 
     return HttpResponseRedirect(reverse('event_detail', args=[slug]))
+
+
+def CategoryView(request, cats):
+    """
+    View to show the events based on the category
+    """
+    category = Category.objects.get(slug=cats)
+    category_events = Event.objects.filter(category=category)
+    # Set up pagination
+    p = Paginator(Category.objects.all(), 1)
+    page = request.GET.get('page')
+    events = p.get_page(page)
+    nums = "a" * events.paginator.num_pages
+
+    return render(request, 'category.html', {
+        'cats': cats.title(),
+        'category_events': category_events,
+        'events': events,
+        'nums': nums})
+
+
+def search_events(request):
+    """
+    View to list the events based on the matching keyword typed in the search bar.
+    """
+    if request.method == 'POST':
+        search = request.POST['search']
+        events = Event.objects.filter(name__icontains=search)
+        return render(
+            request,
+            'search_events.html',
+            {'search': search, 'events': events}
+            )
+    else:
+        return render(request, 'search_events.html', {})
