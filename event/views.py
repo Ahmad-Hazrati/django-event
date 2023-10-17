@@ -9,14 +9,23 @@ from .forms import CommentForm
 from django.core.paginator import Paginator
 
 
-class EventList(generic.ListView):
-    """
-    A generic list view to disply the event lists.
-    """
-    model = Event
-    queryset = Event.objects.filter(status=1).order_by('-created_on')
-    template_name = 'home.html'
-    paginate_by = 3
+def eventlist(request):
+    event_list = Event.objects.all().order_by('-created_on')
+    p = Paginator(Event.objects.all(), 3)
+    page = request.GET.get('page')
+    events = p.get_page(page)
+    nums = "a" * events.paginator.num_pages
+    return render(request, 'home.html', {'event_list': event_list, 'events': events, 'nums': nums})
+
+
+# class EventList(generic.ListView):
+#     """
+#     A generic list view to disply the event lists.
+#     """
+#     model = Event
+#     queryset = Event.objects.filter(status=1).order_by('-created_on')
+#     template_name = 'home.html'
+#     paginate_by = 3
 
     # def get_context_data(self, *args, **kwargs):
     #     # cat_menu = Category.objects.all()

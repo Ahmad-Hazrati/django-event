@@ -38,7 +38,7 @@
             {% endfor %}
         </div>
     </div>
-    {% if is_paginated %}
+    <!-- {% if is_paginated %}
     <nav aria-label="Page navigation example">
         <ul class="pagination justify-content-center">
             {% if events.has_previous %}
@@ -62,11 +62,12 @@
             {% endif %}
         </ul>
     </nav>
-    {% endif %}
+    {% endif %} -->
 </div>
 {% else %}
 <div class="alert alert-danger" role="alert">
-    Sorry, there is no such category exist!
+    <strong>Sorry! There is no item in this category.</strong>
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
 
 {% endif %}

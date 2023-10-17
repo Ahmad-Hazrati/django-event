@@ -50,11 +50,13 @@ INSTALLED_APPS = [
 
     # Apps
     'event',
+    'profiles',
 
     # Others
     'django_summernote',
     'crispy_forms',
     'crispy_bootstrap4',
+    'djrichtextfield'
 ]
 
 SITE_ID = 1
@@ -68,6 +70,19 @@ MESSAGE_TAGS = {
     messages.SUCCESS: 'alert-success',
     messages.WARNING: 'alert-warning',
     messages.ERROR: 'alert-danger',
+}
+
+DJRICHTEXTFIELD_CONFIG = {
+    'js': ['//cdn.ckeditor.com/4.14.0/standard/ckeditor.js'],
+    'init_template': 'djrichtextfield/init/ckeditor.js',
+    'settings': {
+        'toolbar': [
+            ['Format', 'Bold', 'Italic', 'Underline'],
+            ['NumberedList', 'BulletedList'], ['Undo', 'Redo'],
+            ['Maximize']
+        ],
+        'format_tags': 'p;h1;h2;h3'
+    }
 }
 
 MIDDLEWARE = [
