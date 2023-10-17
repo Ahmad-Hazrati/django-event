@@ -6,6 +6,7 @@ urlpatterns = [
     path('', views.eventlist, name='home'),
     path('<slug:slug>/', views.event_detail, name='event_detail'),
     path('like/<slug:slug>', views.event_like, name='event_like'),
+    path('registeration_confirmation/<slug:slug>', views.registeration_confirmation, name='registeration-confirmation'),
     path(
         '<slug:slug>/delete_comment/<int:comment_id>',
         views.comment_delete,

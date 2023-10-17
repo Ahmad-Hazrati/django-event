@@ -1,4 +1,4 @@
-{% extends 'base.html' %} 
+{% extends 'base.html' %}
 {% block content %}
 {% load static %}
 {% load crispy_forms_tags %}
@@ -54,9 +54,21 @@
                             {{ comment_count }}
                         </strong>
                     </div>
+                    <div class="col-1">
+                        <strong class="text-secondary"><i class="fa fa-users" aria-hidden="true"></i>
+                            {{ participant_count }}
+                        </strong>
+                    </div>
                 </div>
             </div>
         </div>
+    </div>
+    <div>
+        {% if registered %} 
+        <p>You have already registered for this event!</p>
+        {% else %}
+        <a  class="btn btn-outline-primary" href="{% url 'registeration-confirmation' post.slug %}" role="button">Register</a>
+        {% endif %}
     </div>
     <div class="row">
         <div class="col">
@@ -130,6 +142,17 @@
                 <a id="deleteConfirm" href="#" class="btn btn-danger">Delete</a>
             </div>
         </div>
+    </div>
+</div>
+
+<div>
+    <h3>Event Participants</h3>
+    <div>
+        {% for user in event.participants.all %}
+        <div>
+            <strong>{{ user.username }}</strong>
+        </div>
+        {% endfor %}
     </div>
 </div>
 

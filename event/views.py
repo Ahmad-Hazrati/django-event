@@ -1,4 +1,4 @@
-from django.shortcuts import render, get_object_or_404, reverse
+from django.shortcuts import render, redirect, get_object_or_404, reverse
 from django.views import generic
 from django.views.generic import ListView
 from django.contrib import messages
@@ -48,6 +48,8 @@ def event_detail(request, slug, *args, **kwargs):
     post = get_object_or_404(queryset, slug=slug)
     comments = post.comments.all().order_by("-created_on")
     comment_count = post.comments.filter(approved=True).count()
+    registered = request.user.events.filter(slug=slug).exists()
+    participant_count = post.participants.all().count()
     liked = False
     commented = False
 
@@ -78,7 +80,9 @@ def event_detail(request, slug, *args, **kwargs):
             "comments": comments,
             "comment_count": comment_count,
             "liked": liked,
-            "comment_form": comment_form
+            "comment_form": comment_form,
+            "participant_count": participant_count,
+            "registered": registered
         },
     )
 
@@ -98,10 +102,17 @@ def event_like(request, slug, *args, **kwargs):
     return HttpResponseRedirect(reverse('event_detail', args=[slug]))
 
 
+def registeration_confirmation(request, slug):
+    event = Event.objects.get(slug=slug)
+    if request.method == 'POST':
+        event.participants.add(request.user)
+        return redirect('event_detail', slug)
+
+    return render(request, 'event_confirmation.html', {'event': event})
+
+
 def comment_delete(request, slug, comment_id, *args, **kwargs):
-    """
-    view to delete comment
-    """
+    """ View to delete comment """
     # queryset = Event.objects.filter(status=1)
     # post = get_object_or_404(queryset)
     comment = Comment.objects.get(id=comment_id)
