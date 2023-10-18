@@ -1,108 +1,368 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Social Fun
 
-Welcome Ahmad Hazrati,
+This project is designed and developed to create a better user experience for the users / members of a community. The users has the ability to register and login to the site and view the events posted by the admin / community responsible person. The users are also able to register to events, like and comment on an event, edit and delete their comments. The functionality of category and profile pages and search bar are also added for user convenience and better user experience.
 
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
+The website is created for real-life situations but embedded with fictitious data for checking purpose. The site is showcasing Python (Django framework), JavaScript, HTML, CSS, Bootstrap, PostgreSQL database, Herokuapp and Gitpod for Project Portfolio 4.
 
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
+And can be accessed by this [link.](https://socialfun-9d543c215b26.herokuapp.com/)
 
-## Gitpod Reminders
+![Responsive Mockup Screenshot](views/README_files/mockup.png)
 
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
+## Contents
+<a name="contents"></a>
 
-`python3 -m http.server`
+- [UX](#ux)
+  - [Strategy](#strategy)
+    - [User Stories](#user-stories)
+  - [Scope](#scope)
+    - [Essential Content](#essential-content)
+    - [Optional Content](#optional-content)
+  - [Structure](#structure)
+  - [Skeleton](#structure)
+    - [Wireframes](#wireframes)
+  - [Surface(Design)](#surface-design)
+    - [Imagery](#imagery)
+    - [Typography](#typography)
+- [Features](#features)
+  - [Existing Features](#existing-features)
+  - [Features Left to Implement](#features-left-to-implement)
+- [Technologies Used](#technologies-used)
+  - [Languages Used](#languages-used)
+  - [Frameworks, Libraries & Programs Used](#frameworks-libraries--programs-used)
+- [Testing](#testing)
+  - [Development Testing](#development-testing)
+  - [Testing User Stories](#testing-user-stories)
+     - [User Goals](#user-goals)
+     - [Site Administrator Goals](#site-administrator-goals)
+  - [Validator Testing](#validator-testing)
+  - [Bugs / Issues](#bugs--issues)
+  - [Unresolved Bugs / Issues](#unresolved-bugs-or-issues)
+- [Deployment](#deployment)
+  - [Deploying to Heroku](#deploying-to-heroku)
+  - [Making a Local Clone](#making-a-local-clone)
+- [Credits](#credits)
+  - [Content](#content)
+  - [Media](#media)
+  - [Code](#media)
+- [Acknowledgements](#Acknowledgements)
 
-A blue button should appear to click: _Make Public_,
 
-Another blue button should appear to click: _Open Browser_.
+## UX
+### Strategy
+The objective of the site is to allow users to check the current and next 5 days weather condition for any geographic location. The user is also able to compare the weather condition of 2 different geographical locations / cities and see the result of comparison made based on the weather conditions. 
+#### User Stories
+- User Goals:
+  - To check the current weather of a location / city.
+  - To check the next 5 days weather forecast for any geographical location/ city. 
+  - To see the weather condition comparison result of 2 different locations/ cities.
+<br><br>
+- Site Administrator Goals:
+  - To give users the options to check current weather, weather forecasts and weather comparison result of 2 different locations / cities from the terminal.
+  - To give users the ability to navigate through options back and forth easily.
+  - To present data in more user friendly format as possible within the constraints of the terminal.
+  - To create an application using Python with clean, resuable and commented code, utilising different functions and libraries. 
+  - To handle any potential errors appropriately and consistently.
+  - To keep security sensitive information hidden.
 
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
+### Scope
+#### Essential Content
+ - The app will allow users to enter a location / city name and get the current weather information with a user friendly format.
+ - The app will allow users to enter a location / city name and get the next 5 days weather information with a user friendly format.
+  - The app will allow users to enter 2 different locations / cities and get the compared weather information result. 
+#### Optional Content
+- The app contains an introductory page containing app title, purpose and menu options.
+### Structure
+- The structure of the app was defined and mapped out on a This helped define the required interactions to develop a usuable app.
+- The structure of the weather data fetching in to the app is done through API link. 
+### Skeleton
+#### Wireframes
+- The project wireframe can be found [here.](views/README_files/wireframe.png)
+### Surface (Design)
+#### Imagery
+- The emojis are used as weather symbol to describe the weather condition and are taken from [Pilliapp](https://www.piliapp.com/emoji/list/weather/).
+![Weather Symbol](views/README_files/emojis.png)
+#### Typography
+- The python art library is used to for the Titles style.<br><br>
+<a href="#contents">BACK TO CONTENTS 🔼</a>
 
-A blue button should appear to click: _Make Public_,
+## Features 
 
-Another blue button should appear to click: _Open Browser_.
+### Existing Features
 
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
+- __Starting App__ 
+  - When the app loads, a text art title appears followed by by 2 line text describing the purpose of the app. Subsequently main menu options appear to provide the user four options.
+  - Each step is displayed with a delay of one second to add value to the user experience.
+  ![App Start](views/README_files/app_start.png)<br><br>
+- __Current Weather__ 
+  - The current weather section starts with prompting the user to enter the name of a location / city and ends with displaying the result and sub menu options.
+  - The user input is validated to be only alphabet / letters.
+  ![Current Weather](views/README_files/current_weather.png)
+ <br><br>
+- __Forecast Weather__ 
+  - The forecast weather section starts with prompting the user to enter the name of a location / city and ends with displaying the result and sub menu options.
+  - The 5 days forecast weather will display with delay of 2 seconds to give the user the chance to glance over the data.
+  - The user input is validated to be only alphabet / letters.
+  ![Forecast Weather](views/README_files/forecast_weather.png)
+ <br><br>
+- __Weather Comparison__ 
+  - The weather comparison section starts with prompting the user to enter the names of 2 different location / cities and ends with displaying the weather comparison result based on weather condition and sub menu options.
+  - The user inputs are validated to be only alphabet / letters.
+  ![Weather Comparison](views/README_files/weather_comparison.png.png)
+ <br><br>
+ 
+- __Menu Options__ 
+  - The menu options provide the users with the ability to go to the main app page or quit the app.
+  _ The up and down selection option give the user more convenient way to select the exact option and eliminates the incorrect input by the user.
+  - There also appears an options menu beneath where the user can select to change their name, change their feedback, confirm they are happy with the feedback or delete it altogher.
+  ![Menu Options](views/README_files/menu_options.png)<br><br>
 
-To log into the Heroku toolbelt CLI:
+### Features Left to Implement
+- Initially, the idea was to present the historical weather data of European countries' capital based on the user date choice. But due to limitation of OpenWeathers API daily data request and time couldn't implemented.
+<br><br>
+<a href="#contents">BACK TO CONTENTS 🔼</a>
 
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
+## Technologies Used
 
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
+### Languages Used
+- **Python**: used extensively during project.
+- **Markdown**: Used exclusively for README.
 
-------
+### Frameworks, Libraries & Programs Used
+- **simple-term-menu**: used to create the app menu options.
+- **art**: used to give font style to the app titles.
+- **requests**: used to request data through API from OpenWeatherMap.
+- **datetime**: from the standard library, used to perform operations on date and time objects and strings.
+- **time**: from the standard library used to access sleep method for pauses during pertinent points of relaying information to the user.
+- **os**: from the standard library used to access system method to clear terminal screen at appropriate points whilst the program is running.
+- **sys**: from the standard library used to access system method to quit the program.
+- **system**: from the standard library used to clear the app screen before loading the new data.
+- **Code Institute PEP8 Linter**: used to perform check of Python code.
+- **Open Weather API** used to access weather forecast data for given location / city.A one call subscription was made for this service which enables 1000 calls per day free before entering the payment tier.
+- **Wireframe** is used to sketch the app contents.
+- **Visual Studio Code** IDE used to develop the project.
+- **Git** used for version control.
+- **GitHub** as cloud repository for Git version control.
 
-## Release History
+<br><a href="#contents">BACK TO CONTENTS 🔼</a>
 
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
+## Testing 
+### Development Testing
 
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
+- __Starting Options__
+  - The app started successfully using the Run Program button with the title formated with art library and font "cybermedium" and with 2 lines text describing the app's purpose. Subsequently followed by the main menu options.
+  - Select "Current Weather" or "Forecast Weather", or "Weather Comparison" or "Exit§ option to direct to the relevant section.
+    <br><br>
+- __Current Weather__
+  - The current weather page loaded successfully prompting the user for input. 
+  - When the input is correct, the current weather is displayed. 
+  - The sub-menu option is presented afterwards with each one working satisfactorily. 
+  - Various errors were purposefully entered into the terminal to check the app response as detailed below:
+  - *Non-alphabet / letter entry*: a variety of non-letter entries were made with the expected response detailed below: ![Invalid Input](views/README_files/invalid_input.png).
+    A while loop is run to reprompt the user until enters the valid input.
+  - *Invalid City Name*: a number of incorrect city names were typed to test and the response are detailed below: ![Invalid City Name](views/README_files/invalid_city_name.png).
+   <br><br>
+- __Forecast Weather__
+  - - The forecast weather page loaded successfully prompting the user for input. 
+  - When the input is correct, the forecast weather is displayed. 
+  - The sub-menu option is presented afterwards with each one working satisfactorily. 
+  - Various errors were purposefully entered into the terminal to check the app response as detailed below:
+  - *Non-alphabet / letter entry*: a variety of non-letter entries were made with the expected response detailed below: ![Invalid Input](views/README_files/invalid_input.png).
+    A while loop is run to reprompt the user until enters the valid input.
+  - *Invalid City Name*: a number of incorrect city names were typed to test and the response are detailed below: ![Invalid City Name](views/README_files/invalid_city_name.png).
+  <br><br>
+- __Weather Comparison__
+   - The weather comparison page loaded successfully prompting the user for inputs. 
+  - When the inputs are correct, the weather information is displayed with the result of compared weather conditions. 
+  - The sub-menu option is presented afterwards with each one working satisfactorily. 
+  - Various errors were purposefully entered into the terminal to check the app response as detailed below:
+  - *Non-alphabet / letter entry*: a variety of non-letter entries were made with the expected response detailed below: ![Invalid Input](views/README_files/invalid_input.png).
+    A while loop is run to reprompt the user until enters the valid input.
+  - *Invalid City Name*: a number of incorrect city names were typed to test and the response are detailed below: ![Invalid City Name](views/README_files/invalid_city_name.png).
+   <br><br>
+- __User Options__
+  - The two User Options formats - main menu and and sub-menu - were both presented at the appropriate time: current weather, forecast weather, and weather comparison respectively.
+  - Each option was selected to confirm direction to the appropriate part of the app.
 
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
+### Testing User Stories
+#### User Goals
+- **To check the current weather of a location / city.**
+  - The app prompts the user to enter the name of any geographical location / city to display the current weather condition. 
+  - The app then presents the data back to the user, fulfilling the requirements of this user goal.
 
-**July 2 2021:** Remove extensions that are not available in Open VSX.
+- **To check the next 5 days weather forecast for any geographical location/ city.**
 
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
+  - The user is prompted to enter the name of any geographical location / city to display the forecast weather for next 5 days. 
+  - The user is then presented with the 5 days forecasts weather, achieving the objective of this goal.
 
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
+- **To see the weather condition comparison result of 2 different locations/ cities.**
 
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
+  - The user is prompted to enter the names of any geographical locations / cities to display the weather condition with a compared weather condition result. 
+  - The user is then presented with the output, fulfilling this goal.
 
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
+#### Site Administrator Goals
+  - **To give users the options to check current weather, weather forecasts and weather comparison result of 2 different locations / cities from the terminal.**
 
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
+    - The user can access current weather, forecast weather and weather comparison result data via via Open Weather API.
 
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
+  - **To give users the ability to navigate through options back and forth easily.**
 
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
+    - The menu and sub-menu options allows the user to go back and forth and experience different sections of the app.
 
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
+  - **To present data in more user friendly format as possible within the constraints of the terminal.**
 
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
+    - The font format, menu options, display data with a break of 1-2 seconds and validating the user inputs are some of the measures in this regard.
 
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
+    - **To create an application using Python with clean, resuable and commented code, utilising different functions and libraries.**
 
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
+    - code has been broken into discrete files to try and group together code in an ordered manner that seeks to follow the flow of the program.
+    - The code has been broken into discrete files to try and group together code in an ordered manner that seeks to follow the flow of the program.
+    - The functions have been written in a way such that they are atomic and perform discrete operations. The fun.py file has many examples of function calls in order to create the end result.
+    - Code is commented throughout to provide future proofing and all functions are annotated with a docstring.
 
-------
+  - **To handle any potential errors appropriately and consistently.**
 
-## FAQ about the uptime script
+    - Throughout the app there are multiple points where error handling is required. This is achieved through try/except in most cases along with if/else statements. 
 
-**Why have you added this script?**
+  - **To keep security sensitive information hidden.**
 
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
+    - The Open Weather API key is stored as an environment variable in Heroku project config vars and testing API key added to gitignore file.
 
-**How will this affect me?**
+### Validator Testing 
 
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
+- Python
+  - Each Python file was passed through the Code Institute Linter. After refactoring, the code was passed through the linter again and the results are shown below.
+    - The current_weather.py file was passed through the linter with no warnings or errors returned.
+  ![Current Weather File PEP8 Results](views/README_files/current_weather_pep8.png)<br><br> 
+     - The forecast_weather.py file was passed through the linter with no warnings or errors returned.
+  ![Forecast Weather File PEP8 Results](views/README_files/forecast_weather_pep8.png)<br><br> 
+    - The weather_comparison.py file was passed through the linter with no warnings or errors returned.
+  ![Weather Comparison File PEP8 Results](views/README_files/weather_comparison_pep8.png)<br><br> 
+    - The run.py file was passed through the linter and few long line warnings returned due to conditional statements being used and couldn't find the desired solution to meet them.
+  ![Run File PEP8 Results](views/README_files/run_pep8.png)<br><br>  
 
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
+<a href="#contents">BACK TO CONTENTS 🔼</a>
 
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
+### Bugs / Issues
 
-**So….?**
+<table  width = 100% cellspacing="0" cellpadding="0">
+   <tr>
+   <th>Issue/Bug</th>
+   <th>Solution</th>
+   </tr>
+   <tr>
+   <td>Issue with simple-terminal-menu library not being supported by WINDOWS.</td>
+   <td>Ubantu as virtual machine is installed and used as platform to run the VS Code on and then clone the repository to it.</td>
+   </tr>
+   <tr>
+   <td>Issue with importing the API key.</td>
+   <td>Windows environment variable and the function "os.getenv" is used to solve the issue.</td>
+   </tr>
+   <tr>
+   <td>Issue with incorrect user input.</td>
+   <td>Add get_user_input function with the use of try and except and if-else conditional statements to solve the issue.</td>
+   </tr>
+   <tr>
+   <td> Tried to deploy to Heroku app but got failed due to requirements.txt file has been populated with template meta data.</td>
+   <td>Regenerate the requirements.txt and then run the deployment and the issue is solved.</td>
+   </tr>
+   <tr>
+   <td>Issue to get the weather condition for next 5 days.</td>
+   <td>Run the for loop for date list and solve the issue.</td>
+   </tr>
+  </table>
 
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
+### Unresolved Bugs or Issues
+- The issue to indent the long conditional statements are not met due to not finding required data and insufficient time.
+ <br><br>
+<a href="#contents">BACK TO CONTENTS 🔼</a>
 
-**Can I opt out?**
+## Deployment
 
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
+### Deploying to Heroku
+* This site was deployed by completing the following steps:
+
+1. Log in to [Heroku](https://id.heroku.com) or create an account.
+2. On the main page click the button labelled New in the top right corner and from the drop-down menu select Create New App.
+3. You must enter a unique app name.
+4. Next select your region.
+5. Click on the Create App button
+6. The next page is the project’s Deploy Tab. Click on the Settings Tab and scroll down to Config Vars.
+7. Click Reveal Config Vars and enter the following:
+    - Add "PORT" into the Key box and 8000 into the Value box and click the Add button.
+    - Enter "API_KEY" into the next available Key box and the API_KEY value into the corresponding Value box.
+    - Enter API_KEY into the next available Key box and the Open Weather API key into the corresponding Value box.
+8. Next, scroll down to the Buildpack section click Add Buildpack select python and click Save Changes.
+9. Repeat step 8 to add node.js. o Note: The Buildpacks must be in the correct order. If not click and drag them to move into the correct order.
+10. Scroll to the top of the page and choose the Deploy tab.
+11. Select Github as the deployment method.
+12. Confirm you want to connect to GitHub.
+13. Search for the repository name and click the connect button.
+14. Scroll to the bottom of the deploy page and select the preferred deployment type.
+15. Click either Enable Automatic Deploys for automatic deployment when you push updates to Github.
+
+### Making a Local Clone
+
+1. Log in to GitHub and locate the [GitHub Repository.](https://github.com/Ahmad-Hazrati/weather-forecasting)
+2. Under the repository name, click "Clone or download".
+3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+4. Open Git Bash
+5. Change the current working directory to the location where you want the cloned directory to be made.
+6. Type `git clone`, and then paste the URL you copied in Step 3.
 
 ```
-pkill uptime.sh
-rm .vscode/uptime.sh
+$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 ```
 
-**Anything more?**
+7. Press Enter. Your local clone will be created.
 
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
+```
+$ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
+> Cloning into `CI-Clone`...
+> remote: Counting objects: 10, done.
+> remote: Compressing objects: 100% (8/8), done.
+> remove: Total 10 (delta 1), reused 10 (delta 1)
+> Unpacking objects: 100% (10/10), done.
+```
+<br><br>
+<a href="#contents">BACK TO CONTENTS 🔼</a>
+
+## Credits 
+### Content 
+NOTE: Specific links are included within the Python files. The list below summarises content credits in general.
+- Thanks to my Code Institute mentor Mr. Aleksei Konovalov for his guidance, insight and the constant confidence boost to help me in the right direction.
+- Code Institute Tutor Assistance, Slack, other online resources and especially the Github of [Johnamdickson](https://github.com/johnamdickson/portfolio-project-3/)
+ were a massive help for Python that enabled some of the functionality I was looking for.
+- Weather codes and corresponding weather conditions from [Open Weather.](https://openweathermap.org/weather-conditions)
+- Deployment information to Heroku is taken from Code Institute [Love Sandwiches - Essentials Project](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LS101+2021_T1/courseware/293ee9d8ff3542d3b877137ed81b9a5b/e3b664e16366444c8d722c5d8340b340/) and respective guidelines.
+
+### Media
+- The emojis are used as weather symbol to describe the weather condition and are taken from [Pilliapp](https://www.piliapp.com/emoji/list/weather/).
+- The python art library is used to for the Titles style.
+- The simple-terminal-menu is used to create the menu and sub-menu options in the app.
+<br><br>
+<a href="#contents">BACK TO CONTENTS 🔼</a>
+
+## Reminders
+
+- Your code must be placed in the `run.py` file
+- Your dependencies must be placed in the `requirements.txt` file
+- Do not edit any of the other files or your code may not deploy properly
+
+## Creating the Heroku app
+
+When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
+
+1. `heroku/python`
+2. `heroku/nodejs`
+
+You must then create a _Config Var_ called `PORT`. Set this to `8000`
+
+If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
+
+Connect your GitHub repository and deploy as normal.
+
+## Constraints
+
+The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
 
 ---
-
-Happy coding!

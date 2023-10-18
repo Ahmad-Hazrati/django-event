@@ -1,4 +1,5 @@
 {% extends "base.html" %}
+{% block title%}{{cats}} Category {% endblock %}
 
 {% block content %}
 {% load static %}
@@ -34,12 +35,15 @@
                         </div>
                     </div>
                 </div>
+                {%if forloop.counter|divisibleby:3 %}
             </div>
-            {% endfor %}
+            <div class="row">
+                {% endif %}
+                {% endfor %}
+             </div>
         </div>
     </div>
-    <!-- {% if is_paginated %}
-    <nav aria-label="Page navigation example">
+    <!-- <nav aria-label="Page navigation example">
         <ul class="pagination justify-content-center">
             {% if events.has_previous %}
             <li class="page-item"><a class="page-link" href="?page=1">&laquo First</a></li>
@@ -61,8 +65,7 @@
             </li>
             {% endif %}
         </ul>
-    </nav>
-    {% endif %} -->
+    </nav> -->
 </div>
 {% else %}
 <div class="alert alert-danger" role="alert">

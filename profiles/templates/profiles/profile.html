@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Profile - {{ profile.user.username }}{% endblock %}
+{% block title %}Profile | {{ profile.user.username }}{% endblock %}
 
 {% block content %}
 <div class="container p-4">
@@ -14,11 +14,14 @@
                 {% endif %}
             </div>
             <h1>{{ profile.user.username }}</h1>
-            <p><strong>Joined: </strong>{{ profile.user.date_joined|date:'d M Y' }}</p>
-            <p><strong>Event: </strong>{{ profile.user.event_posts.count}}</p>
+            <p><strong>Joined on: </strong>{{ profile.user.date_joined|date:'d M Y' }}</p>
+
             {% if profile.bio is not none %}
             {{ profile.bio|safe}}
             {% endif %}
+
+            <p><strong>Number of Event(s) created : </strong>{{ profile.user.event_posts.count}}</p>
+            <p><strong>Number of Event(s) registered to: </strong>{{ profile.user.events.count}}</p>
 
             {% if request.user == profile.user %}
             <button id="myBtn" class="btn btn-primary w-25 mb-4">Edit</button>

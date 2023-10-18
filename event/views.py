@@ -106,6 +106,9 @@ def registeration_confirmation(request, slug):
     event = Event.objects.get(slug=slug)
     if request.method == 'POST':
         event.participants.add(request.user)
+        messages.add_message(
+                request,
+                messages.SUCCESS, 'You have successfully registered to the event!')
         return redirect('event_detail', slug)
 
     return render(request, 'event_confirmation.html', {'event': event})
@@ -159,17 +162,11 @@ def CategoryView(request, cats):
     """
     category = Category.objects.get(slug=cats)
     category_events = Event.objects.filter(category=category)
-    # Set up pagination
-    p = Paginator(Category.objects.all(), 1)
-    page = request.GET.get('page')
-    events = p.get_page(page)
-    nums = "a" * events.paginator.num_pages
 
     return render(request, 'category.html', {
         'cats': cats.title(),
-        'category_events': category_events,
-        'events': events,
-        'nums': nums})
+        'category_events': category_events
+        })
 
 
 def search_events(request):
