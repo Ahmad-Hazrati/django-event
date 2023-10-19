@@ -1,12 +1,12 @@
 # Social Fun
 
-This project is designed and developed to create a better user experience for the users / members of a community. The users has the ability to register and login to the site and view the events posted by the admin / community responsible person. The users are also able to register to events, like and comment on an event, edit and delete their comments. The functionality of category and profile pages and search bar are also added for user convenience and better user experience.
+This project is designed and developed to create a better user experience for the users / members of a community. The users has the ability to register and login to the site and view the events posted by the admin / community responsible person. The users are also able to register to events, like and comment on an event, edit and delete their comments. The functionality of category & profile pages and search bar are also added for user convenience and better user experience.
 
 The website is created for real-life situations but embedded with fictitious data for checking purpose. The site is showcasing Python (Django framework), JavaScript, HTML, CSS, Bootstrap, PostgreSQL database, Herokuapp and Gitpod for Project Portfolio 4.
 
 And can be accessed by this [link.](https://socialfun-9d543c215b26.herokuapp.com/)
 
-![Responsive Mockup Screenshot](views/README_files/mockup.png)
+![Responsive Mockup Screenshot](static/media/mockup.png)
 
 ## Contents
 <a name="contents"></a>
@@ -15,8 +15,11 @@ And can be accessed by this [link.](https://socialfun-9d543c215b26.herokuapp.com
   - [Strategy](#strategy)
     - [User Stories](#user-stories)
   - [Scope](#scope)
-    - [Essential Content](#essential-content)
-    - [Optional Content](#optional-content)
+    - [Simple and intuitive User Experience](#simple-and-intuitive-user-experience)
+    - [Relevant content](#relevant-content)
+    - [Features for upgraded experience](#features-for-upgraded-experience)
+    - [Different account types for Participants and staff members or Admin](#different-account-types-for-participants-and-staff-members-or-admin)
+    - [Responsiveness](#responsiveness)
   - [Structure](#structure)
   - [Skeleton](#structure)
     - [Wireframes](#wireframes)
@@ -49,31 +52,79 @@ And can be accessed by this [link.](https://socialfun-9d543c215b26.herokuapp.com
 
 ## UX
 ### Strategy
-The objective of the site is to allow users to check the current and next 5 days weather condition for any geographic location. The user is also able to compare the weather condition of 2 different geographical locations / cities and see the result of comparison made based on the weather conditions. 
+The objective of the site is to provide a common platform for all user to view and register to community events. The site allows users to share their thoughts, leave comments through commenting and liking/unliking events. 
 #### User Stories
 - User Goals:
-  - To check the current weather of a location / city.
-  - To check the next 5 days weather forecast for any geographical location/ city. 
-  - To see the weather condition comparison result of 2 different locations/ cities.
-<br><br>
+  - As a Site User I can find the navigation items so that I can navigate the site easily.
+  - As a Site User I can view a paginated list of events so that I select an event to view.
+  - As a Site User I can view a list of events so that I can select one to check for more details.
+  - As a Site User I can click on an event so that I can read the full content.
+  - As a Site User / Admin I can view the number of likes on each event so that I can see which is the most popular or viral.
+  - As a Site User / Admin I can view the number of participants on each event so that I can view how many people have registered for the event.
+  - As a Site User I can register an account so that I can comment, like and participate to events.
+  - As a Site User I can login & logout of the site so that I can access the site securely.
+  - As a Site User / Admin I can view comments on an individual event so that I can read the conversation.
+  - As a Site User I can leave comments on an event so that I can be involved in the conversation.
+  - As a Site User I can edit and delete my comments so that I revise/update and remove the contents.
+  - As a Site User I can like or unlike an event so that I can interact with the content.
+  - As a Site User I can register to an event so that I can participate.
+  - As a Site User I can click on the event category so that I can view the events for selected category.
+  - As a Site Admin I can create, edit, update and delete event categories so that I can manage the event categories.
+  - As a Site User I can search for desired event so that I can find it more easily and quickly.
+  - As a Site User I can view my profile so that I can check and update it.
+  - As a Site User I can edit my profile so that I can keep it up-to-date.
+  - As a Site User I can upload a profile picture so that my profile looks good and modern.
+  - As a Site User I can receive different alert messages so that I know the status of different actions happened.
+<br>
+
 - Site Administrator Goals:
-  - To give users the options to check current weather, weather forecasts and weather comparison result of 2 different locations / cities from the terminal.
-  - To give users the ability to navigate through options back and forth easily.
-  - To present data in more user friendly format as possible within the constraints of the terminal.
-  - To create an application using Python with clean, resuable and commented code, utilising different functions and libraries. 
+  - As a Site Admin I can create, read, update and delete events so that I can manage the event content.
+  - As a Site Admin I can create draft events so that I can finish writing the content later.
+  - As a Site Admin I can approve or disapprove comments so that I can filter out objectionable comments.
   - To handle any potential errors appropriately and consistently.
   - To keep security sensitive information hidden.
 
 ### Scope
-#### Essential Content
- - The app will allow users to enter a location / city name and get the current weather information with a user friendly format.
- - The app will allow users to enter a location / city name and get the next 5 days weather information with a user friendly format.
-  - The app will allow users to enter 2 different locations / cities and get the compared weather information result. 
-#### Optional Content
-- The app contains an introductory page containing app title, purpose and menu options.
+#### Simple and intuitive User Experience
+ - Ensure the site title and logo provides the first hand information regarding the site;
+ - Ensure the navigation menu is visible and functional at every step;
+ - Ensure every page has a suggestive name that fits the its content;
+ - Ensure the user will get visual feedback when navigating through pages;
+ - Ensure the design matches the events theme and does not confuse the user.
+
+ #### Relevant content
+ - Add information about event such as name, category, venue, description, author, participants, created_on, start_date, end_date, registeration_deadline and status;
+ - Create relevant navigation buttons for each section;
+ - Create a section for comments, category and profile.
+
+#### Features for upgraded experience
+- Create a paginated list of events that allows user to view all events along with all its details;
+- Create an event detail page that allows user to like/unlike the event, register to an event, leave, edit and delete comments;
+- Create a category page with dropdown options that allows user to view all events related to selected category;
+- Create a profile page that allows user to view and edit his profile. The user can also view that how many events it has created and registered to;
+- The search bar in the navigation area gives the user the ability to search for events quickly and easily.
+
+#### Different account types for Participants and staff members or Admin
+- Participants can register to events while the admin can add event, category and approve comments;
+- Participants can like/unlike and leave comments on events; edit and delete their comments but the comments will be approved by the admin and will be published;
+- Participants have access only to their Profile page for managing it;
+- Staff members/ admin has access to admin panel to manage events, comments, category and both types of accounts.
+
+#### Responsiveness
+- Create a responsive design for desktop, tablet and mobile devices.
+
 ### Structure
-- The structure of the app was defined and mapped out on a This helped define the required interactions to develop a usuable app.
-- The structure of the weather data fetching in to the app is done through API link. 
+The structure of the website is divided into nine pages but the content is depending on authentication and authorization of users.
+- **Register/Login** pages give the user the possibility to create an account and authenticate for accessing different features;
+- **Logout** feature is a modal that helps user to exit the site securely;
+- **Home** page is open and visible to all types of user irrespective of registeration and authorization and includes list of all events;
+- **Event Detail** page is visible only to logged-in user and displays the detail of selected event. The page also allows user to like/unlike and register to an event. The user also has the ability to leave, edit and delete comments related to the event;
+- **Registeration Confirmation** page is visible only to logged-in user and allows the user to complete the event registeration process.
+- **Event Category** page is visible only to logged-in user and allows the user to view the list of events for a selected category.
+- **Profile** page is visible only to logged-in user and allows the user to view and update its contents.
+- **Search Bar** feature is visible to all users and allows the user to search for matching events based on the typed characters. But the actual link to display the details of the event is only visible to logged-in user.
+- **Admin Panel** page is visible only to staff members with admin rights / admin to manage the events, comments, category, profile and user accounts.
+
 ### Skeleton
 #### Wireframes
 - The project wireframe can be found [here.](views/README_files/wireframe.png)

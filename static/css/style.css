@@ -209,13 +209,14 @@ button.btn.btn-signup {
     color: #fff;
 } */
 
-button.btn.btn-edit {
+button.btn.btn-edit,
+button.btn.btn-signup {
     background-color: #23BBBB;
     color: #fff;
 }
 
-.btn-signup:hover,
-.btn-signup:active {
+button.btn.btn-signup:hover,
+button.btn.btn-signup:active {
     background-color: #fff;
     color: #23BBBB;
 }
@@ -231,13 +232,13 @@ button.btn.btn-edit {
     text-decoration: underline;
 }
 
-.btn-like {
+button.btn.btn-like {
     color: #E84610;
     border: none;
     background: transparent;
 }
 
-.btn-delete {
+button.btn.btn-delete {
     color: #fff;
     background: #E84610;
 }
