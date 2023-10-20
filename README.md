@@ -23,7 +23,9 @@ And can be accessed by this [link.](https://socialfun-9d543c215b26.herokuapp.com
   - [Structure](#structure)
   - [Skeleton](#structure)
     - [Wireframes](#wireframes)
+    - [Database](#database)
   - [Surface(Design)](#surface-design)
+    - [Color Scheme](#color-scheme)
     - [Imagery](#imagery)
     - [Typography](#typography)
 - [Features](#features)
@@ -126,8 +128,10 @@ The structure of the website is divided into nine pages but the content is depen
 - **Admin Panel** page is visible only to staff members with admin rights / admin to manage the events, comments, category, profile and user accounts.
 
 ### Skeleton
+
 #### Wireframes
-- Wireframe is used to plan and sketch the website.
+Wireframe is used to plan and sketch the website.
+
 ##### Mobile Devices
 - [Home Page. Mobile Screen](/static/media/home_page_mobile.png)
 - [Event Detail Page. Mobile Screen](/static/media/event_detail_page_mobile.png)
@@ -149,18 +153,39 @@ The structure of the website is divided into nine pages but the content is depen
 - [Logout Page. Desktop Screen](/static/media/logout_page_desktop.png)
 
 #### Database
-- PostgreSQL relational database is used to store the website data. 
+PostgreSQL relational database is used to store the website data. 
 <details>
   <summary>Database Schema</summary>
 <img src="static/media/database_models.png" ><br>
 </details>
 
 ### Surface (Design)
+#### Color Scheme
+All colors were selected with the eyedropper plugin from the website logo to maintain chromatic harmony.
+- Radial-gradient (circle at 74.2% 50.9%, rgb(14, 72, 222) 5.2%, rgb(3, 22, 65) 75.3%) is used as the main color for the header and footer sections.<br>
+![#Blue Gradient](static/media/gradient.png)
+- (#E84610) color is used as hover and active color for header and footer sections. The color is also used for delete buttons and links.<br>
+![#E84610](static/media/e84610.png)
+- (#0D6EFD) is used as text color for event heading and description, for buttons except indicated separately, and for image flash.<br>
+![#0D6EFD](static/media/0d6efd.png)
+- (#000) is used as the text color for event-subtitle.<br>
+![#000](static/media/000.png)
+- (#F6F6F6) is used as the main background color.<br>
+![#F6F6F6](static/media/f6f6f6.png)
+- (#FFF) is used as the main text color for the header and footer sections, event titles and buttons' text color.<br>
+![#FFF](static/media/fff.png)
+- Few other limited colors are used as border and shading colors.
+
 #### Imagery
-- The emojis are used as weather symbol to describe the weather condition and are taken from [Pilliapp](https://www.piliapp.com/emoji/list/weather/).
-![Weather Symbol](views/README_files/emojis.png)
+- The website logo that describes the website's purpose is taken from [Freepik](https://www.freepik.com/).
+- The fictitious pictures used in the website are taken from [Pexcels](https://www.pexcels.com/).
+
 #### Typography
-- The python art library is used to for the Titles style.<br><br>
+- EB Garamond font is used as the main font for headings.<br>
+![EB Garamond Font](static/media/eb_garamond_font.png)
+- Roboto font is used as the main font for paragraphs.<br>
+![Roboto Font](static/media/roboto_font.png)
+<br><br>
 <a href="#contents">BACK TO CONTENTS 🔼</a>
 
 ## Features 
