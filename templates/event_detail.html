@@ -68,7 +68,7 @@
         {% if registered %} 
         <p><strong>You have registered to this event!</strong></p>
         {% else %}
-        <a  class="btn btn-outline-primary" href="{% url 'registeration-confirmation' post.slug %}" role="button">Register</a>
+        <a  class="btn btn-primary" href="{% url 'registeration-confirmation' post.slug %}" role="button">Register</a>
         {% endif %}
     </div>
     <div class="row">
@@ -118,7 +118,7 @@
                 <form id="commentForm" method="POST" style="margin-top: 1.3em;">
                     {{ comment_form | crispy }}
                     {% csrf_token %}
-                    <button id="submitButton" type="submit" class="btn btn-signup btn-lg">Submit</button>
+                    <button id="submitButton" type="submit" class="btn btn-primary btn-lg">Submit</button>
                 </form>
                 {% else %}
                 <h3>Log in to leave a comment</h3>

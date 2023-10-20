@@ -10,11 +10,11 @@
     --background: radial-gradient(circle at 74.2% 50.9%, rgb(14, 72, 222) 5.2%, rgb(3, 22, 65) 75.3%);
     --pink: #FF02CB;
     --yellow: #FFD41C;
-
+    --orange: #E84610;
+    --blue: #1081e8;
     --black: #000;
     --off-white: #f6f6f6;
     --white: #fff;
-    --orange: #ffbf50;
 
     /* Utilities */
     --smal-box-shadow: 1px -1px 7px 0 #00000061;
@@ -43,21 +43,24 @@ h6 {
 
 main {
     flex: 1 0 auto;
-    background-color: var(--white);
+    background-color: var(--off-white);
 }
 
 /* Header */
 
-.navbar {
+.navbar,
+ul.dropdown-menu.show {
     background: var(--background);
     box-shadow: var(--smal-box-shadow);
 }
 
-#navbarSupportedContent .nav-link {
+#navbarSupportedContent .nav-link,
+ul.dropdown-menu.show .dropdown-item {
     color: var(--white);
 }
 
-#navbarSupportedContent .nav-link:hover {
+#navbarSupportedContent .nav-link:hover,
+ul.dropdown-menu.show .dropdown-item:hover {
     color: var(--orange);
 }
 
@@ -107,16 +110,8 @@ footer a:hover {
     border-radius: 5px;
 }
 
-.light-bg {
-    background-color: #fff;
-}
-
-.dark-bg {
-    background-color: #445261;
-}
-
 .main-bg {
-    background-color: #F9FAFC;
+    background-color: var(--off-white);
 }
 
 .card {
@@ -133,7 +128,7 @@ footer a:hover {
     bottom: 5%;
     max-width: 30%;
     left: -2px;
-    background-color: #23BBBB;
+    background-color: var(--blue);
 }
 
 .scale {
@@ -142,7 +137,7 @@ footer a:hover {
 }
 
 .author {
-    color: white;
+    color: var(--white);
     margin: 4px;
     text-transform: uppercase;
 }
@@ -157,8 +152,8 @@ footer a:hover {
 }
 
 .masthead-text {
-    background-color: #445261;
-    color: white;
+    background-color: var(--blue);
+    color: var(--white);
     position: relative;
 }
 
@@ -174,7 +169,7 @@ footer a:hover {
     right: 90%;
     height: 100%;
     width: 150%;
-    background: #445261;
+    background: var(--blue);
     -webkit-transform: skew(15deg);
     -moz-transform: skew(15deg);
     transform: skew(15deg);
@@ -183,12 +178,12 @@ footer a:hover {
 
 .post-link {
     text-decoration: none;
-    color: #445261;
+    color: var(--blue);
 }
 
 .post-link:hover,
 .page-link {
-    color: #E84610;
+    color: var(--orange);
 }
 
 .post-name {
@@ -198,7 +193,7 @@ footer a:hover {
 
 .post-subtitle {
     margin-left: 5%;
-    color: lightgray;
+    color: var(--black);
 }
 
 /* .btn-signup,
@@ -209,43 +204,36 @@ button.btn.btn-signup {
     color: #fff;
 } */
 
-button.btn.btn-edit,
-button.btn.btn-signup {
-    background-color: #23BBBB;
-    color: #fff;
-}
-
-button.btn.btn-signup:hover,
-button.btn.btn-signup:active {
-    background-color: #fff;
-    color: #23BBBB;
+button.btn.btn-edit{
+    background-color: var(--blue);
+    color: var(--white);
 }
 
 .link {
-    color: #23BBBB;
+    color: var(--blue);
     text-decoration: none;
 }
 
 .link:hover,
 .link:active {
-    color: #445261;
+    color: var(--orange);
     text-decoration: underline;
 }
 
 button.btn.btn-like {
-    color: #E84610;
+    color: var(--orange);
     border: none;
     background: transparent;
 }
 
 button.btn.btn-delete {
-    color: #fff;
-    background: #E84610;
+    color: var(--white);
+    background: var(--orange);
 }
 
 .btn-like:hover,
 .btn-like:active {
-    color: #E84610;
+    color: var(--orange);
     background: transparent;
     border: none;
 }
