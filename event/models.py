@@ -33,7 +33,7 @@ class Event(models.Model):
     description = models.TextField()
     featured_image = CloudinaryField('image', default='placeholder')
     excerpt = models.TextField(blank=True)
-    # location = models.location()
+    venue = models.CharField(max_length=150)
     participants = models.ManyToManyField(User, blank=True, related_name='events')
     start_date = models.DateTimeField(null=True)
     end_date = models.DateTimeField(null=True)

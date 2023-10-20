@@ -127,7 +127,34 @@ The structure of the website is divided into nine pages but the content is depen
 
 ### Skeleton
 #### Wireframes
-- The project wireframe can be found [here.](views/README_files/wireframe.png)
+- Wireframe is used to plan and sketch the website.
+##### Mobile Devices
+- [Home Page. Mobile Screen](/static/media/home_page_mobile.png)
+- [Event Detail Page. Mobile Screen](/static/media/event_detail_page_mobile.png)
+- [Event Registeration Confirmation Page. Mobile Screen](/static/media/registeration_confirmation_mobile.png)
+- [Category Page. Mobile Screen](/static/media/category_page_mobile.png)
+- [Profile Page. Mobile Screen](/static/media/profile_page_mobile.png)
+- [Sign Up Page. Mobile Screen](/static/media/signup_page_mobile.png)
+- [Login Page. Mobile Screen](/static/media/login_page_mobile.png)
+- [Logout Page. Mobile Screen](/static/media/logout_page_mobile.png)
+
+##### Desktop 
+- [Home Page. Desktop Screen](/static/media/home_page_desktop.png)
+- [Event Detail Page. Desktop Screen](/static/media/event_detail_page_desktop.png)
+- [Event Registeration Confirmation Page. Desktop Screen](/static/media/registeration_confirmation_desktop.png)
+- [Category Page. Desktop Screen](/static/media/category_page_desktop.png)
+- [Profile Page. Desktop Screen](/static/media/profile_page_desktop.png)
+- [Sign Up Page. Desktop Screen](/static/media/signup_page_desktop.png)
+- [Login Page. Desktop Screen](/static/media/login_page_desktop.png)
+- [Logout Page. Desktop Screen](/static/media/logout_page_desktop.png)
+
+#### Database
+- PostgreSQL relational database is used to store the website data. 
+<details>
+  <summary>Database Schema</summary>
+<img src="static/media/database_models.png" ><br>
+</details>
+
 ### Surface (Design)
 #### Imagery
 - The emojis are used as weather symbol to describe the weather condition and are taken from [Pilliapp](https://www.piliapp.com/emoji/list/weather/).
