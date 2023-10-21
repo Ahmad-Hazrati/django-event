@@ -28,6 +28,7 @@ And can be accessed by this [link.](https://socialfun-9d543c215b26.herokuapp.com
     - [Color Scheme](#color-scheme)
     - [Imagery](#imagery)
     - [Typography](#typography)
+- [Agile Methodology](#agile-methodology)
 - [Features](#features)
   - [Existing Features](#existing-features)
   - [Features Left to Implement](#features-left-to-implement)
@@ -188,6 +189,10 @@ All colors were selected with the eyedropper plugin from the website logo to mai
 <br><br>
 <a href="#contents">BACK TO CONTENTS 🔼</a>
 
+## Agile Methodology
+This project was developed using the Agile methodology.
+All user stories implementation progress was registered using socialfun_project. As the user stories were accomplished, they were moved from the board **To Do**, to **Progress** and finally **Done** lists.
+
 ## Features 
 
 ### Existing Features
@@ -237,7 +242,10 @@ All colors were selected with the eyedropper plugin from the website logo to mai
   - This page is the base template that encompases the header and footer, css files, script files, links to external APIs and loads the contents to all other pages when is called.<br><br>
 
 ### Features Left to Implement
-- Initially, the idea was to present the historical weather data of European countries' capital based on the user date choice. But due to limitation of OpenWeathers API daily data request and time couldn't implemented.
+Initially, the idea was that the venue should be a separate model and user could create, edit and delete venue and event, but due to limited time couldn't implemented.
+Further features inclusive (cited above) to implement are:
+- another feature couldn't be that user could perform CRUD operations on events and venues from the profile page;
+- a review page will be a better feature to be added to the app.
 <br><br>
 <a href="#contents">BACK TO CONTENTS 🔼</a>
 
