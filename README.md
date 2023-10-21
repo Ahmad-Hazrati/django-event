@@ -192,32 +192,49 @@ All colors were selected with the eyedropper plugin from the website logo to mai
 
 ### Existing Features
 
-- __Starting App__ 
-  - When the app loads, a text art title appears followed by by 2 line text describing the purpose of the app. Subsequently main menu options appear to provide the user four options.
-  - Each step is displayed with a delay of one second to add value to the user experience.
-  ![App Start](views/README_files/app_start.png)<br><br>
-- __Current Weather__ 
-  - The current weather section starts with prompting the user to enter the name of a location / city and ends with displaying the result and sub menu options.
-  - The user input is validated to be only alphabet / letters.
-  ![Current Weather](views/README_files/current_weather.png)
- <br><br>
-- __Forecast Weather__ 
-  - The forecast weather section starts with prompting the user to enter the name of a location / city and ends with displaying the result and sub menu options.
-  - The 5 days forecast weather will display with delay of 2 seconds to give the user the chance to glance over the data.
-  - The user input is validated to be only alphabet / letters.
-  ![Forecast Weather](views/README_files/forecast_weather.png)
- <br><br>
-- __Weather Comparison__ 
-  - The weather comparison section starts with prompting the user to enter the names of 2 different location / cities and ends with displaying the weather comparison result based on weather condition and sub menu options.
-  - The user inputs are validated to be only alphabet / letters.
-  ![Weather Comparison](views/README_files/weather_comparison.png.png)
- <br><br>
- 
-- __Menu Options__ 
-  - The menu options provide the users with the ability to go to the main app page or quit the app.
-  _ The up and down selection option give the user more convenient way to select the exact option and eliminates the incorrect input by the user.
-  - There also appears an options menu beneath where the user can select to change their name, change their feedback, confirm they are happy with the feedback or delete it altogher.
-  ![Menu Options](views/README_files/menu_options.png)<br><br>
+- __Home Page__ 
+  - When the website loads, the home page will loads as well as default page to all users wheather authenticated or not. 
+  - The home page is paginated and contains list of all events published by the authorized community user / admin. 
+  - The event's name, author, excerpt, image, date created on and number of likes are displayed in the home page. 
+  - If the user is authenticated then the event name and excerpt will be an active navigate link to the event detail page. 
+  ![Home Page](static/media/home_page.png)<br><br>
+- __Event Detail Page__ 
+  - This page is only visible to authorized user and contains all details of the event. 
+  - The page also contains the event registeration link and comment sections. 
+  - The registeration button is visible in case the user has not yet registered to the event, otherwise, registeration confirmation message will be displayed.
+  - The user can leave, read, edit and delete comments. 
+  - The comments will be visible to other users once has been approved and published by the admin but can be seen, edited and deleted by the comments' owner.
+  ![Event Detail Page](static/media/event_detail_page.png)<br><br>
+- __Event Registeration Page__
+  - This page is only visible to authorized user and contains the event details and registeration confirmation button. 
+  - The user has also the ability to go back to the event detail page by clicking the back button.
+  ![Event Detail Page](static/media/event_registeration_page.png)<br><br>
+- __Category Page__ 
+  - The category page is only visible to authorized user and contains the list of all event related to selected category.
+  - The category page can be accessed from the navbar dropdown link and is dynamic. The category dropdown updates when a new category is added by the admin.
+  - The event in the category page is navigable and prompt the user to the event detail page once selected.
+  ![Category Page](static/media/category_page.png)<br><br>
+- __Profile Page__ 
+  - The profile page is only visible to authorized user and comprises of profile properties, an edit button and latest events created by the user.
+  - The user can edit its profile avatar and bio in here.
+  ![Profile Page](static/media/profile_page.png)<br><br>
+- __Logout Page__ 
+  - The logout page is only visible to authorized user and allows the user to logout securely from the website.
+  ![Logout Page](static/media/logout_page.png)<br><br>
+- __Register Page__ 
+  - The register page is only visible to unauthorized user and allows the user to create an account and securely access the website.
+  - The page allows the user to fill out the form and sign up. The page includes a login button to navigate the user to login page in case already has an account.
+  ![Register Page](static/media/register_page.png)<br><br>
+- __Login Page__ 
+  - The login page is only visible to unauthorized user and allows the user to log in and securely access the website.
+  - The page allows the user to fill out his/her username or email and password to log in. The page also comprises a register button to navigate the user to register page in case not have created an account yet.
+  ![Login Page](static/media/login_page.png)<br><br>
+- __Builtin Admin Page__ 
+  - The builtin admin page is only visible to authorized user and allows the user with admin rights to log in and securely access the website administration panel.
+  - The page allows the admin to create, read, update and delete the contents of the event, comment, category and profile pages. 
+  ![Builtin Admin Page](static/media/admin_page.png)<br><br>
+- __Base Page__ 
+  - This page is the base template that encompases the header and footer, css files, script files, links to external APIs and loads the contents to all other pages when is called.<br><br>
 
 ### Features Left to Implement
 - Initially, the idea was to present the historical weather data of European countries' capital based on the user date choice. But due to limitation of OpenWeathers API daily data request and time couldn't implemented.
