@@ -252,25 +252,33 @@ Further features inclusive (cited above) to implement are:
 ## Technologies Used
 
 ### Languages Used
-- **Python**: used extensively during project.
+- **Python, JavaScript, HTML and CSS** are used extensively during project.
 - **Markdown**: Used exclusively for README.
 
 ### Frameworks, Libraries & Programs Used
-- **simple-term-menu**: used to create the app menu options.
-- **art**: used to give font style to the app titles.
-- **requests**: used to request data through API from OpenWeatherMap.
-- **datetime**: from the standard library, used to perform operations on date and time objects and strings.
-- **time**: from the standard library used to access sleep method for pauses during pertinent points of relaying information to the user.
-- **os**: from the standard library used to access system method to clear terminal screen at appropriate points whilst the program is running.
-- **sys**: from the standard library used to access system method to quit the program.
-- **system**: from the standard library used to clear the app screen before loading the new data.
-- **Code Institute PEP8 Linter**: used to perform check of Python code.
-- **Open Weather API** used to access weather forecast data for given location / city.A one call subscription was made for this service which enables 1000 calls per day free before entering the payment tier.
-- **Wireframe** is used to sketch the app contents.
-- **Visual Studio Code** IDE used to develop the project.
-- **Git** used for version control.
-- **GitHub** as cloud repository for Git version control.
-
+[Django](https://www.djangoproject.com/): used to create the project and apps.<br>
+[Bootstrap5](https://getbootstrap.com/): used to add predefined styled elements and responsiveness.<br>
+[Git](https://git-scm.com/): used for version control.<br>
+[GitHub](https://github.com/): used to host the source code of the program.<br>
+[Gitpod](https://gitpod.io/): used to write and test the code.<br>
+[Heroku](https://dashboard.heroku.com/): used to deploy the project.<br>
+[Cloudinary](https://cloudinary.com/): used to store static files.<br>
+[PostgreSQL](https://www.elephantsql.com/): used to store the website data.<br>
+[Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/): Django crispy forms are used to render the forms.<br>
+[Balsamiq](https://balsamiq.com/wireframes/): used to sketch the project contents.<br>
+[TinyPNG](https://tinypng.com/): used to compress the images.<br>
+[Favicon.io](https://favicon.io/): used to generate the website favicon.<br>
+[Font Awesome](https://fontawesome.com/): used for creating attractive UX with icons.<br>
+[Google Fonts](https://fonts.google.com/): used for project typography.<br>
+[JsHint](https://jshint.com/): used to validate the scripts.<br>
+[PEP8 Validator](http://pep8online.com/): used to perform check of Python code.<br>
+[HTML - W3C HTML Validator](https://validator.w3.org/#validate_by_uri+with_options): used to valid the HTML pages.<br>
+[CSS - Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_uri): used to valid the CSS.<br>
+[Chrome Del Tools](https://developer.chrome.com/docs/devtools/): used for project debugging purpose.<br>
+[W.A.V.E.](https://wave.webaim.org/): used for testing accessibility.<br>
+[Freepik](https://www.freepik.com/): used to generate the website logo.<br>
+[Gradients](https://gradients.shecodes.io/gradients/398#gradient): used to generate the header and footer gradient color.<br>
+**Light House**: used to test the website performance.<br>
 <br><a href="#contents">BACK TO CONTENTS 🔼</a>
 
 ## Testing 

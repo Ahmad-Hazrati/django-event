@@ -65,7 +65,7 @@ ul.dropdown-menu.show .dropdown-item:hover {
 #navbarSupportedContent .nav-link.active {
     border-bottom: 2px solid var(--orange);
     color: var(--orange);
-    font-weight: 500;
+    font-weight: 600;
 }
 
 img.logo {
@@ -174,13 +174,14 @@ footer a:hover {
     z-index: 100;
 }
 
-.post-link {
+.post-link,
+.page-link {
     text-decoration: none;
     color: var(--blue);
 }
 
 .post-link:hover,
-.page-link {
+.page-link:hover {
     color: var(--orange);
 }
 
