@@ -11,7 +11,7 @@ class Profiles(TemplateView):
 
     def get_context_data(self, **kwargs):
         profile = Profile.objects.get(user=self.kwargs["pk"])
-        context = {"profile": profile, "from": ProfileForm(instance=profile)}
+        context = {"profile": profile, "form": ProfileForm(instance=profile)}
         return context
 
 

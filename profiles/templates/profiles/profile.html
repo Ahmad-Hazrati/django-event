@@ -45,6 +45,7 @@
     </div>
 </div>
 
+
 <div id="myModal" class="modal mt-5">
     <div class="modal-content container">
         <span class="close fs-1 pe-2">&times;</span>
@@ -52,7 +53,7 @@
             enctype="multipart/form-data">
             <h2 class="text-center fs-4">Edit Profile</h2>
             {% csrf_token %}
-            {{ form|crispy }}
+            {{ form.as_p }}
             {{ form.media }}
             <div class="d-flex justify-content-center">
                 <button type="submit" class="btn btn-primary w-25">Edit</button>

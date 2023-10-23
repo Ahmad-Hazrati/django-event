@@ -40,11 +40,13 @@
     {% include 'includes/footer.html' %}
 
     <script>
-        setTimeout(function () {
-            let messages = document.getElementById('msg');
+        let messages = document.getElementById('msg');
+        if (messages){
             let alert = new bootstrap.Alert(messages);
-            alert.close();
-        }, 2000);
+            setTimeout(function () {
+                alert.close();
+            }, 2000);
+        }
     </script>
 
 
