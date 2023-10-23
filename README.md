@@ -46,11 +46,12 @@ And can be accessed by this [link.](https://socialfun-9d543c215b26.herokuapp.com
   - [Unresolved Bugs / Issues](#unresolved-bugs-or-issues)
 - [Deployment](#deployment)
   - [Deploying to Heroku](#deploying-to-heroku)
+  - [Fork the repository](#fork-the-repository)
   - [Making a Local Clone](#making-a-local-clone)
 - [Credits](#credits)
   - [Content](#content)
   - [Media](#media)
-  - [Code](#media)
+  - [Code](#code)
 - [Acknowledgements](#Acknowledgements)
 
 
@@ -451,13 +452,13 @@ Further features inclusive (cited above) to implement are:
 15. Click either Enable Automatic Deploys for automatic deployment when you push updates to Github.
 
 ### Fork the repository
-For creating a copy of the repository on your account and change it without affecting the original project, use **Fork** directly from GitHub:
+To create a copy of the repository on your account and change it without affecting the original project, use **Fork** directly from GitHub:
 1. On [My Repository Page](https://github.com/Ahmad-Hazrati/django-event), press Fork in the top right of the page
 2. A forked version of my project will appear in your repository
 
 ### Making a Local Clone
 
-1. Log in to GitHub and locate the [GitHub Repository.](https://github.com/Ahmad-Hazrati/django-event)
+1. Log in to Github and locate the [Github Repository.](https://github.com/Ahmad-Hazrati/django-event)
 2. Under the repository name, click "Clone or download".
 3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
 4. Open Git Bash
@@ -485,15 +486,19 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 ### Content 
 - The idea of the project and most of the contents were taken from P4 walkthrough project. 
 - The other contents are fictitious.
- were a massive help for Python that enabled some of the functionality I was looking for.
-- Weather codes and corresponding weather conditions from [Open Weather.](https://openweathermap.org/weather-conditions)
-- Deployment information to Heroku is taken from Code Institute [Love Sandwiches - Essentials Project](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LS101+2021_T1/courseware/293ee9d8ff3542d3b877137ed81b9a5b/e3b664e16366444c8d722c5d8340b340/) and respective guidelines.
 
 ### Media
-- The site logo image is taken from the [Freepik] and the other site images are taken from [Pexels].
+- The site logo image is taken from the [Freepik](https://www.freepik.com/) and the other site images are taken from [Pexels](https://www.pexels.com/).
+
+### Code
+- The code used for most parts of the website is taken from the [Django Blog Webinar](https://www.youtube.com/watch?v=YH--VobIA8c).
+- The code to add pagination and search functionality to the app are taken from [Codemy's tutorial](https://www.youtube.com/watch?v=HHx3tTQWUx0&list=PLCC34OHNcOtqW9BJmgQPPzUpJ8hl49AGy).
+- The code used for event registeration is taken from [Dennis Ivy's Github](https://github.com/divanov11/codebattles.dev).
+- The code to create the profile page is taken from [Dee-McG's tutorial](https://github.com/Dee-McG/Recipe-Tutorial/tree/main).
+- The code used to create the category page is written with the support of mentor.
 
 ## Acknowledgements
-- Thanks to my Code Institute mentor Mr. Aleksei Konovalov for his guidance, insight and the constant confidence boost to help me in the right direction.
-- Thanks to Code Institute for material and support (Tutor Assistance), Slack Community and other valueable online resources.
+- Thanks to my Code Institute mentor Mr. Aleksei Konovalov for his guidance, insight, and constant confidence boost to help me in the right direction.
+- Thanks to Code Institute for material and support (Tutor Assistance), Slack Community, and other valuable online resources.
 <br><br>
 <a href="#contents">BACK TO CONTENTS 🔼</a>
