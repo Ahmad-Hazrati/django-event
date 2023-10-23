@@ -3,11 +3,12 @@ backports.zoneinfo;python_version<"3.9"
 black==23.10.0
 click==8.1.7
 cloudinary==1.35.0
+crispy-bootstrap4==2023.1
 dj-database-url==0.5.0
 dj3-cloudinary-storage==0.0.6
-Django==3.2.22
+Django==4.2.6
 django-allauth==0.57.0
-django-crispy-forms==1.14.0
+django-crispy-forms==2.1
 django-resized==1.0.2
 django-richtextfield==1.6.1
 django-summernote==0.8.20.0
