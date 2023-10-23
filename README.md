@@ -400,29 +400,41 @@ Further features inclusive (cited above) to implement are:
    <th>Solution</th>
    </tr>
    <tr>
-   <td>Issue with simple-terminal-menu library not being supported by WINDOWS.</td>
-   <td>Ubantu as virtual machine is installed and used as platform to run the VS Code on and then clone the repository to it.</td>
+   <td>The website images were not loading from Cloudinary and displaying the error "Must supply API key"</td>
+   <td>The issue is rectified by updating the Cloudinary URL in Heroku.</td>
    </tr>
    <tr>
-   <td>Issue with importing the API key.</td>
-   <td>Windows environment variable and the function "os.getenv" is used to solve the issue.</td>
+   <td>Issue with JS error "Uncaught TypeError: Cannot read properties of null".</td>
+   <td>The issue is rectified by adding an if statement to the code to check the message and execute when it is not null.</td>
    </tr>
    <tr>
-   <td>Issue with incorrect user input.</td>
-   <td>Add get_user_input function with the use of try and except and if-else conditional statements to solve the issue.</td>
+   <td>Issue with deployment to Heroku due to failed to build backports.zoneinfo.</td>
+   <td>The issue is rectified by updating the version of backports.zoneinfo from 0.2.1 to 3.9.</td>
    </tr>
    <tr>
-   <td> Tried to deploy to Heroku app but got failed due to requirements.txt file has been populated with template meta data.</td>
-   <td>Regenerate the requirements.txt and then run the deployment and the issue is solved.</td>
+   <td>Issue with deployment to Heroku due to Node.js.</td>
+   <td>Node.js is removed from Heroku build packs and the issue is rectified. </td>
    </tr>
    <tr>
-   <td>Issue to get the weather condition for next 5 days.</td>
-   <td>Run the for loop for date list and solve the issue.</td>
+   <td>Issue with deployment due to crispy-bootstrap4 and Django version.</td>
+   <td>The issue is rectified by adding the context_processor.py and updatet the relevant code in the view.py.</td>
+   </tr>
+   <tr>
+   <td>Category page was not loading when the user wanted to access from another page.</td>
+   <td>The issue is rectified by adding the crispy-bootstrap4.</td>
+   </tr>
+   <tr>
+   <td>Issue with error "Reverse for 'event_detail' with no argument not found".</td>
+   <td>The issue is rectified by passing the event slug in the url along with event_detail.</td>
+   </tr>
+   <tr>
+   <td>Issue with error "MultipleObjectsReturned" while deleting a comment.</td>
+   <td>The issue is rectified by removing the queryset and post variables from the delete function.</td>
    </tr>
   </table>
 
 ### Unresolved Bugs or Issues
-- The issue to indent the long conditional statements are not met due to not finding required data and insufficient time.
+- Issue with crispy forms is not resolved due to the required version of Django. The required version for crispy-forms is 4.2 while the existing PostgreSQL (ElephantSQL) database is version 6.
  <br><br>
 <a href="#contents">BACK TO CONTENTS 🔼</a>
 
@@ -442,14 +454,13 @@ Further features inclusive (cited above) to implement are:
     - Add "CLOUDINARY_URL" and its value.
     - Add "DATABASE_URL" and its value.
     - Add "SECRET_KEY" and its value.
-8. Next, scroll down to the Buildpack section click Add Buildpack select python and click Save Changes.
-9. Repeat step 8 to add node.js. o Note: The Buildpacks must be in the correct order. If not click and drag them to move into the correct order.
-10. Scroll to the top of the page and choose the Deploy tab.
-11. Select Github as the deployment method.
-12. Confirm you want to connect to GitHub.
-13. Search for the repository name and click the connect button.
-14. Scroll to the bottom of the deploy page and select the preferred deployment type.
-15. Click either Enable Automatic Deploys for automatic deployment when you push updates to Github.
+8. Next, scroll down to the Buildpack section click Add Buildpack select Python, and click Save Changes.
+9. Scroll to the top of the page and choose the Deploy tab.
+10. Select Github as the deployment method.
+11. Confirm you want to connect to GitHub.
+12. Search for the repository name and click the connect button.
+13. Scroll to the bottom of the deploy page and select the preferred deployment type.
+14. Click either Enable Automatic Deploys for automatic deployment when you push updates to Github.
 
 ### Fork the repository
 To create a copy of the repository on your account and change it without affecting the original project, use **Fork** directly from GitHub:
