@@ -483,41 +483,17 @@ $ git clone https://github.com/YOUR-USERNAME/YOUR-REPOSITORY
 
 ## Credits 
 ### Content 
-NOTE: Specific links are included within the Python files. The list below summarises content credits in general.
-- Thanks to my Code Institute mentor Mr. Aleksei Konovalov for his guidance, insight and the constant confidence boost to help me in the right direction.
-- Code Institute Tutor Assistance, Slack, other online resources and especially the Github of [Johnamdickson](https://github.com/johnamdickson/portfolio-project-3/)
+- The idea of the project and most of the contents were taken from P4 walkthrough project. 
+- The other contents are fictitious.
  were a massive help for Python that enabled some of the functionality I was looking for.
 - Weather codes and corresponding weather conditions from [Open Weather.](https://openweathermap.org/weather-conditions)
 - Deployment information to Heroku is taken from Code Institute [Love Sandwiches - Essentials Project](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+LS101+2021_T1/courseware/293ee9d8ff3542d3b877137ed81b9a5b/e3b664e16366444c8d722c5d8340b340/) and respective guidelines.
 
 ### Media
-- The emojis are used as weather symbol to describe the weather condition and are taken from [Pilliapp](https://www.piliapp.com/emoji/list/weather/).
-- The python art library is used to for the Titles style.
-- The simple-terminal-menu is used to create the menu and sub-menu options in the app.
+- The site logo image is taken from the [Freepik] and the other site images are taken from [Pexels].
+
+## Acknowledgements
+- Thanks to my Code Institute mentor Mr. Aleksei Konovalov for his guidance, insight and the constant confidence boost to help me in the right direction.
+- Thanks to Code Institute for material and support (Tutor Assistance), Slack Community and other valueable online resources.
 <br><br>
 <a href="#contents">BACK TO CONTENTS 🔼</a>
-
-## Reminders
-
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
-
-## Creating the Heroku app
-
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
-
-1. `heroku/python`
-2. `heroku/nodejs`
-
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
----
