@@ -5,15 +5,14 @@ import django.utils.timezone
 
 
 class Migration(migrations.Migration):
-
     dependencies = [
-        ('event', '0002_category_slug'),
+        ("event", "0002_category_slug"),
     ]
 
     operations = [
         migrations.AddField(
-            model_name='event',
-            name='venue',
+            model_name="event",
+            name="venue",
             field=models.CharField(default=django.utils.timezone.now, max_length=150),
             preserve_default=False,
         ),

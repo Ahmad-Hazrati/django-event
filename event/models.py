@@ -17,7 +17,7 @@ class Category(models.Model):
         return slugify(self.name)
 
     def get_absolute_url(self):
-        return reverse('home')
+        return reverse("home")
 
     def save(self, *args, **kwargs):
         self.slug = slugify(self.name)
@@ -26,26 +26,29 @@ class Category(models.Model):
 
 class Event(models.Model):
     name = models.CharField(max_length=200, unique=True)
-    category = models.ForeignKey(Category, on_delete=models.PROTECT, default='entertainment')
+    category = models.ForeignKey(
+        Category, on_delete=models.PROTECT, default="entertainment"
+    )
     slug = models.SlugField(max_length=200, unique=True)
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="event_posts")
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="event_posts"
+    )
 
     description = models.TextField()
-    featured_image = CloudinaryField('image', default='placeholder')
+    featured_image = CloudinaryField("image", default="placeholder")
     excerpt = models.TextField(blank=True)
     venue = models.CharField(max_length=150)
-    participants = models.ManyToManyField(User, blank=True, related_name='events')
+    participants = models.ManyToManyField(User, blank=True, related_name="events")
     start_date = models.DateTimeField(null=True)
     end_date = models.DateTimeField(null=True)
     registeration_deadline = models.DateTimeField(null=True)
     updated = models.DateTimeField(auto_now=True)
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
-    likes = models.ManyToManyField(User,
-                                   related_name='eventpost_like', blank=True)
+    likes = models.ManyToManyField(User, related_name="eventpost_like", blank=True)
 
     class Meta:
-        ordering = ['-created_on']
+        ordering = ["-created_on"]
 
     def __str__(self):
         return self.name
@@ -55,7 +58,7 @@ class Event(models.Model):
 
 
 class Comment(models.Model):
-    post = models.ForeignKey(Event, on_delete=models.CASCADE, related_name='comments')
+    post = models.ForeignKey(Event, on_delete=models.CASCADE, related_name="comments")
     name = models.CharField(max_length=80)
     email = models.EmailField()
     body = models.TextField()
@@ -63,7 +66,7 @@ class Comment(models.Model):
     approved = models.BooleanField(default=False)
 
     class Meta:
-        ordering = ['created_on']
+        ordering = ["created_on"]
 
     def __str__(self):
         return f"Comment {self.body} by {self.name}"

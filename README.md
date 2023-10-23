@@ -34,7 +34,8 @@ And can be accessed by this [link.](https://socialfun-9d543c215b26.herokuapp.com
   - [Features Left to Implement](#features-left-to-implement)
 - [Technologies Used](#technologies-used)
   - [Languages Used](#languages-used)
-  - [Frameworks, Libraries & Programs Used](#frameworks-libraries--programs-used)
+  - [Python Packages](#python-packages)
+  - [Programs Used](#programs-used)
 - [Testing](#testing)
   - [Development Testing](#development-testing)
   - [Testing User Stories](#testing-user-stories)
@@ -255,16 +256,27 @@ Further features inclusive (cited above) to implement are:
 - **Python, JavaScript, HTML and CSS** are used extensively during project.
 - **Markdown**: Used exclusively for README.
 
-### Frameworks, Libraries & Programs Used
-[Django](https://www.djangoproject.com/): used to create the project and apps.<br>
+### Python Packages
+- **django**
+- **gunicorn**
+- **dj-database-url**
+- **psycopg2**
+- **dj3-cloudinary-storage**
+- **whitenoise**
+- **jinja2**
+- **django-allauth**
+- **django-crispy-forms**
+- **autopep8**  
+
+### Programs Used
 [Bootstrap5](https://getbootstrap.com/): used to add predefined styled elements and responsiveness.<br>
 [Git](https://git-scm.com/): used for version control.<br>
 [GitHub](https://github.com/): used to host the source code of the program.<br>
 [Gitpod](https://gitpod.io/): used to write and test the code.<br>
 [Heroku](https://dashboard.heroku.com/): used to deploy the project.<br>
 [Cloudinary](https://cloudinary.com/): used to store static files.<br>
+[Summernote](https://summernote.org/): used to online editors.<br>
 [PostgreSQL](https://www.elephantsql.com/): used to store the website data.<br>
-[Crispy Forms](https://django-crispy-forms.readthedocs.io/en/latest/): Django crispy forms are used to render the forms.<br>
 [Balsamiq](https://balsamiq.com/wireframes/): used to sketch the project contents.<br>
 [TinyPNG](https://tinypng.com/): used to compress the images.<br>
 [Favicon.io](https://favicon.io/): used to generate the website favicon.<br>
@@ -277,6 +289,7 @@ Further features inclusive (cited above) to implement are:
 [Chrome Del Tools](https://developer.chrome.com/docs/devtools/): used for project debugging purpose.<br>
 [W.A.V.E.](https://wave.webaim.org/): used for testing accessibility.<br>
 [Freepik](https://www.freepik.com/): used to generate the website logo.<br>
+[Pexels](https://www.pexels.com/): used to generate the website images.<br>
 [Gradients](https://gradients.shecodes.io/gradients/398#gradient): used to generate the header and footer gradient color.<br>
 **Light House**: used to test the website performance.<br>
 <br><a href="#contents">BACK TO CONTENTS 🔼</a>
@@ -423,10 +436,11 @@ Further features inclusive (cited above) to implement are:
 4. Next select your region.
 5. Click on the Create App button
 6. The next page is the project’s Deploy Tab. Click on the Settings Tab and scroll down to Config Vars.
-7. Click Reveal Config Vars and enter the following:
-    - Add "PORT" into the Key box and 8000 into the Value box and click the Add button.
-    - Enter "API_KEY" into the next available Key box and the API_KEY value into the corresponding Value box.
-    - Enter API_KEY into the next available Key box and the Open Weather API key into the corresponding Value box.
+7. Click Reveal Config Vars and enter the following variables and values:
+    - Add "PORT" and its value.
+    - Add "CLOUDINARY_URL" and its value.
+    - Add "DATABASE_URL" and its value.
+    - Add "SECRET_KEY" and its value.
 8. Next, scroll down to the Buildpack section click Add Buildpack select python and click Save Changes.
 9. Repeat step 8 to add node.js. o Note: The Buildpacks must be in the correct order. If not click and drag them to move into the correct order.
 10. Scroll to the top of the page and choose the Deploy tab.
@@ -436,9 +450,14 @@ Further features inclusive (cited above) to implement are:
 14. Scroll to the bottom of the deploy page and select the preferred deployment type.
 15. Click either Enable Automatic Deploys for automatic deployment when you push updates to Github.
 
+### Fork the repository
+For creating a copy of the repository on your account and change it without affecting the original project, use **Fork** directly from GitHub:
+1. On [My Repository Page](https://github.com/Ahmad-Hazrati/django-event), press Fork in the top right of the page
+2. A forked version of my project will appear in your repository
+
 ### Making a Local Clone
 
-1. Log in to GitHub and locate the [GitHub Repository.](https://github.com/Ahmad-Hazrati/weather-forecasting)
+1. Log in to GitHub and locate the [GitHub Repository.](https://github.com/Ahmad-Hazrati/django-event)
 2. Under the repository name, click "Clone or download".
 3. To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
 4. Open Git Bash

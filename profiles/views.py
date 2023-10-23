@@ -5,20 +5,19 @@ from .forms import ProfileForm
 
 
 class Profiles(TemplateView):
-    """ User profile view """
-    template_name = 'profiles/profile.html'
+    """User profile view"""
+
+    template_name = "profiles/profile.html"
 
     def get_context_data(self, **kwargs):
-        profile = Profile.objects.get(user=self.kwargs['pk'])
-        context = {
-            'profile': profile,
-            'from': ProfileForm(instance=profile)
-        }
+        profile = Profile.objects.get(user=self.kwargs["pk"])
+        context = {"profile": profile, "from": ProfileForm(instance=profile)}
         return context
 
 
 class EditProfile(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
-    """ Edit a profile """
+    """Edit a profile"""
+
     form_class = ProfileForm
     model = Profile
 
