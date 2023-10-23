@@ -1,1 +1,1 @@
-web: gunicorn socialfun.wsgi
+web: gunicorn socialfun.wsgi:application
