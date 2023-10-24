@@ -6,7 +6,7 @@ The website is created for real-life situations but embedded with fictitious dat
 
 And can be accessed by this [link.](https://socialfun-9d543c215b26.herokuapp.com/)
 
-![Responsive Mockup Screenshot](static/media/mockup.png)
+![Responsive Mockup Screenshot](/media/images/mockup.png)
 
 ## Contents
 <a name="contents"></a>
@@ -37,11 +37,16 @@ And can be accessed by this [link.](https://socialfun-9d543c215b26.herokuapp.com
   - [Python Packages](#python-packages)
   - [Programs Used](#programs-used)
 - [Testing](#testing)
+  - [Google Chrome Lighthouse](#google-chrome-lighthouse)
+  - [Validator Testing](#validator-testing)
+    - [Python Validator - PEP8](#python-validator-pep8)
+    - [HTML W3C Validator](#html-w3c-validator)
+    - [CSS Jigsaw Validator](#css-jigsaw-validator)
+    - [Jshint Validator](#jshint-validator)
   - [Development Testing](#development-testing)
   - [Testing User Stories](#testing-user-stories)
      - [User Goals](#user-goals)
      - [Site Administrator Goals](#site-administrator-goals)
-  - [Validator Testing](#validator-testing)
   - [Bugs / Issues](#bugs--issues)
   - [Unresolved Bugs / Issues](#unresolved-bugs-or-issues)
 - [Deployment](#deployment)
@@ -136,47 +141,47 @@ The structure of the website is divided into nine pages but the content is depen
 Wireframe is used to plan and sketch the website.
 
 ##### Mobile Devices
-- [Home Page. Mobile Screen](/static/media/home_page_mobile.png)
-- [Event Detail Page. Mobile Screen](/static/media/event_detail_page_mobile.png)
-- [Event Registeration Confirmation Page. Mobile Screen](/static/media/registeration_confirmation_mobile.png)
-- [Category Page. Mobile Screen](/static/media/category_page_mobile.png)
-- [Profile Page. Mobile Screen](/static/media/profile_page_mobile.png)
-- [Sign Up Page. Mobile Screen](/static/media/signup_page_mobile.png)
-- [Login Page. Mobile Screen](/static/media/login_page_mobile.png)
-- [Logout Page. Mobile Screen](/static/media/logout_page_mobile.png)
+- [Home Page. Mobile Screen](/media/images/home_page_mobile.png)
+- [Event Detail Page. Mobile Screen](/media/images/event_detail_page_mobile.png)
+- [Event Registeration Confirmation Page. Mobile Screen](/media/images/registeration_confirmation_mobile.png)
+- [Category Page. Mobile Screen](/media/images/category_page_mobile.png)
+- [Profile Page. Mobile Screen](/media/images/profile_page_mobile.png)
+- [Sign Up Page. Mobile Screen](/media/images/signup_page_mobile.png)
+- [Login Page. Mobile Screen](/media/images/login_page_mobile.png)
+- [Logout Page. Mobile Screen](/media/images/logout_page_mobile.png)
 
 ##### Desktop 
-- [Home Page. Desktop Screen](/static/media/home_page_desktop.png)
-- [Event Detail Page. Desktop Screen](/static/media/event_detail_page_desktop.png)
-- [Event Registeration Confirmation Page. Desktop Screen](/static/media/registeration_confirmation_desktop.png)
-- [Category Page. Desktop Screen](/static/media/category_page_desktop.png)
-- [Profile Page. Desktop Screen](/static/media/profile_page_desktop.png)
-- [Sign Up Page. Desktop Screen](/static/media/signup_page_desktop.png)
-- [Login Page. Desktop Screen](/static/media/login_page_desktop.png)
-- [Logout Page. Desktop Screen](/static/media/logout_page_desktop.png)
+- [Home Page. Desktop Screen](/media/images/home_page_desktop.png)
+- [Event Detail Page. Desktop Screen](/media/images/event_detail_page_desktop.png)
+- [Event Registeration Confirmation Page. Desktop Screen](/media/images/registeration_confirmation_desktop.png)
+- [Category Page. Desktop Screen](/media/images/category_page_desktop.png)
+- [Profile Page. Desktop Screen](/media/images/profile_page_desktop.png)
+- [Sign Up Page. Desktop Screen](/media/images/signup_page_desktop.png)
+- [Login Page. Desktop Screen](/media/images/login_page_desktop.png)
+- [Logout Page. Desktop Screen](/media/images/logout_page_desktop.png)
 
 #### Database
 PostgreSQL relational database is used to store the website data. 
 <details>
   <summary>Database Schema</summary>
-<img src="static/media/database_models.png" ><br>
+<img src="/media/images/database_models.png" ><br>
 </details>
 
 ### Surface (Design)
 #### Color Scheme
 All colors were selected with the eyedropper plugin from the website logo to maintain chromatic harmony.
 - Radial-gradient (circle at 74.2% 50.9%, rgb(14, 72, 222) 5.2%, rgb(3, 22, 65) 75.3%) is used as the main color for the header and footer sections.<br>
-![#Blue Gradient](static/media/gradient.png)
+![#Blue Gradient](/media/images/gradient.png)
 - (#E84610) color is used as hover and active color for header and footer sections. The color is also used for delete buttons and links.<br>
-![#E84610](static/media/e84610.png)
+![#E84610](/media/images/e84610.png)
 - (#0D6EFD) is used as text color for event heading and description, for buttons except indicated separately, and for image flash.<br>
-![#0D6EFD](static/media/0d6efd.png)
+![#0D6EFD](/media/images/0d6efd.png)
 - (#000) is used as the text color for event-subtitle.<br>
-![#000](static/media/000.png)
+![#000](/media/images/000.png)
 - (#F6F6F6) is used as the main background color.<br>
-![#F6F6F6](static/media/f6f6f6.png)
+![#F6F6F6](/media/images/f6f6f6.png)
 - (#FFF) is used as the main text color for the header and footer sections, event titles and buttons' text color.<br>
-![#FFF](static/media/fff.png)
+![#FFF](/media/images/fff.png)
 - Few other limited colors are used as border and shading colors.
 
 #### Imagery
@@ -185,15 +190,15 @@ All colors were selected with the eyedropper plugin from the website logo to mai
 
 #### Typography
 - EB Garamond font is used as the main font for headings.<br>
-![EB Garamond Font](static/media/eb_garamond_font.png)
+![EB Garamond Font](/media/images/eb_garamond_font.png)
 - Roboto font is used as the main font for paragraphs.<br>
-![Roboto Font](static/media/roboto_font.png)
+![Roboto Font](/media/images/roboto_font.png)
 <br><br>
 <a href="#contents">BACK TO CONTENTS 🔼</a>
 
 ## Agile Methodology
 This project was developed using the Agile methodology.
-All user stories implementation progress was registered using socialfun_project. As the user stories were accomplished, they were moved from the board **To Do**, to **Progress** and finally **Done** lists.
+All user stories implementation progress was registered using [socialfun_project](https://github.com/users/Ahmad-Hazrati/projects/6). As the user stories were accomplished, they were moved from the board **To Do**, to **Progress** and finally to **Done** lists.
 
 ## Features 
 
@@ -204,42 +209,42 @@ All user stories implementation progress was registered using socialfun_project.
   - The home page is paginated and contains list of all events published by the authorized community user / admin. 
   - The event's name, author, excerpt, image, date created on and number of likes are displayed in the home page. 
   - If the user is authenticated then the event name and excerpt will be an active navigate link to the event detail page. 
-  ![Home Page](static/media/home_page.png)<br><br>
+  ![Home Page](/media/images/home_page.png)<br><br>
 - __Event Detail Page__ 
   - This page is only visible to authorized user and contains all details of the event. 
   - The page also contains the event registeration link and comment sections. 
   - The registeration button is visible in case the user has not yet registered to the event, otherwise, registeration confirmation message will be displayed.
   - The user can leave, read, edit and delete comments. 
   - The comments will be visible to other users once has been approved and published by the admin but can be seen, edited and deleted by the comments' owner.
-  ![Event Detail Page](static/media/event_detail_page.png)<br><br>
+  ![Event Detail Page](/media/images/event_detail_page.png)<br><br>
 - __Event Registeration Page__
   - This page is only visible to authorized user and contains the event details and registeration confirmation button. 
   - The user has also the ability to go back to the event detail page by clicking the back button.
-  ![Event Detail Page](static/media/event_registeration_page.png)<br><br>
+  ![Event Detail Page](/media/images/event_registeration_page.png)<br><br>
 - __Category Page__ 
   - The category page is only visible to authorized user and contains the list of all event related to selected category.
   - The category page can be accessed from the navbar dropdown link and is dynamic. The category dropdown updates when a new category is added by the admin.
   - The event in the category page is navigable and prompt the user to the event detail page once selected.
-  ![Category Page](static/media/category_page.png)<br><br>
+  ![Category Page](/media/images/category_page.png)<br><br>
 - __Profile Page__ 
   - The profile page is only visible to authorized user and comprises of profile properties, an edit button and latest events created by the user.
   - The user can edit its profile avatar and bio in here.
-  ![Profile Page](static/media/profile_page.png)<br><br>
+  ![Profile Page](/media/images/profile_page.png)<br><br>
 - __Logout Page__ 
   - The logout page is only visible to authorized user and allows the user to logout securely from the website.
-  ![Logout Page](static/media/logout_page.png)<br><br>
+  ![Logout Page](/media/images/logout_page.png)<br><br>
 - __Register Page__ 
   - The register page is only visible to unauthorized user and allows the user to create an account and securely access the website.
   - The page allows the user to fill out the form and sign up. The page includes a login button to navigate the user to login page in case already has an account.
-  ![Register Page](static/media/register_page.png)<br><br>
+  ![Register Page](/media/images/register_page.png)<br><br>
 - __Login Page__ 
   - The login page is only visible to unauthorized user and allows the user to log in and securely access the website.
   - The page allows the user to fill out his/her username or email and password to log in. The page also comprises a register button to navigate the user to register page in case not have created an account yet.
-  ![Login Page](static/media/login_page.png)<br><br>
+  ![Login Page](/media/images/login_page.png)<br><br>
 - __Builtin Admin Page__ 
   - The builtin admin page is only visible to authorized user and allows the user with admin rights to log in and securely access the website administration panel.
   - The page allows the admin to create, read, update and delete the contents of the event, comment, category and profile pages. 
-  ![Builtin Admin Page](static/media/admin_page.png)<br><br>
+  ![Builtin Admin Page](/media/images/admin_page.png)<br><br>
 - __Base Page__ 
   - This page is the base template that encompases the header and footer, css files, script files, links to external APIs and loads the contents to all other pages when is called.<br><br>
 
@@ -267,7 +272,7 @@ Further features inclusive (cited above) to implement are:
 - **jinja2**
 - **django-allauth**
 - **django-crispy-forms**
-- **autopep8**  
+- **autopep8**
 
 ### Programs Used
 [Bootstrap5](https://getbootstrap.com/): used to add predefined styled elements and responsiveness.<br>
@@ -284,7 +289,7 @@ Further features inclusive (cited above) to implement are:
 [Font Awesome](https://fontawesome.com/): used for creating attractive UX with icons.<br>
 [Google Fonts](https://fonts.google.com/): used for project typography.<br>
 [JsHint](https://jshint.com/): used to validate the scripts.<br>
-[PEP8 Validator](http://pep8online.com/): used to perform check of Python code.<br>
+[CI Python Linter](https://pep8ci.herokuapp.com/#/): used to perform check of Python code.<br>
 [HTML - W3C HTML Validator](https://validator.w3.org/#validate_by_uri+with_options): used to valid the HTML pages.<br>
 [CSS - Jigsaw CSS Validator](https://jigsaw.w3.org/css-validator/#validate_by_uri): used to valid the CSS.<br>
 [Chrome Del Tools](https://developer.chrome.com/docs/devtools/): used for project debugging purpose.<br>
@@ -296,10 +301,88 @@ Further features inclusive (cited above) to implement are:
 <br><a href="#contents">BACK TO CONTENTS 🔼</a>
 
 ## Testing 
+Testing has taken place continuously throughout the development of the project. Each view was tested regularly. When the outcome was not as expected, debugging took place at that point.
+
+### Google Chrome Lighthouse
+Google Chrome lighthouse checks and generates a comprehensive report regarding the website's performance, accessibility, best practices, and SEO.
+![Home Page. Lighthouse Report](/media/images/lighthouse_home_page.png)
+![Event Detail Page. Lighthouse Report](/media/images/lighthouse_event_detail_page.png)
+![Event Registration Page. Lighthouse Report](/media/images/lighthouse_event_registeration_page.png)
+![Category Page. Lighthouse Report](/media/images/lighthouse_category_page.png)
+![Profile Page. Lighthouse Report](/media/images/lighthouse_profile_page.png)
+![Logout Page. Lighthouse Report](/media/images/lighthouse_logout_page.png)
+![Register Page. Lighthouse Report](/media/images/lighthouse_register_page.png)
+![Login Page. Lighthouse Report](/media/images/lighthouse_login_page.png)
+
+### Validator Testing 
+#### Python Validator - PEP8
+- Python testing was done using the PEP8 Online to ensure there were no syntax errors in the project. All python files were entered into the online checker and no errors were found in any of the custom codes.
+**Event admin.py** : No errors or warnings to show.
+![Event admin.py PEP8](/media/images/pep8_event_admin.png)
+**Event app.py** : No errors or warnings to show.
+![Event app.py PEP8](/media/images/pep8_event_app.png)
+**Event context_processor.py** : No errors or warnings to show.
+![Event context_processor.py PEP8](/media/images/pep8_event_context_processor.png)
+**Event forms.py** : No errors or warnings to show.
+![Event forms.py PEP8](/media/images/pep8_event_forms.png)
+**Event models.py** : No errors or warnings to show.
+![Event models.py PEP8](/media/images/pep8_event_models.png)
+**Event urls.py** : No errors or warnings to show.
+![Event urls.py PEP8](/media/images/pep8_event_urls.png)
+**Event views.py** : No errors or warnings to show.
+![Event views.py PEP8](/media/images/pep8_event_views.png)
+**Profile admin.py** : No errors or warnings to show.
+![profile admin.py PEP8](/media/images/pep8_profile_admin.png)
+**Profile apps.py** : No errors or warnings to show.
+![profile apps.py PEP8](/media/images/pep8_profile_apps.png)
+**Profile forms.py** : No errors or warnings to show.
+![profile forms.py PEP8](/media/images/pep8_profile_forms.png)
+**Profile models.py** : No errors or warnings to show.
+![profile models.py PEP8](/media/images/pep8_profile_models.png)
+**Profile urls.py** : No errors or warnings to show.
+![profile urls.py PEP8](/media/images/pep8_profile_urls.png)
+**Profile views.py** : No errors or warnings to show.
+![profile views.py PEP8](/media/images/pep8_profile_views.png)
+**Socialfun settings.py** : No errors or warnings to show.
+![profile settings.py PEP8](/media/images/pep8_socialfun_settings.png)
+**Socialfun urls.py** : No errors or warnings to show.
+![profile urls.py PEP8](/media/images/pep8_socialfun_urls.png)
+**Socialfun wsgi.py** : No errors or warnings to show.
+![profile wsgi.py PEP8](/media/images/pep8_socialfun_wsgi.png)
+
+
+#### HTML W3C Validator
+As this is a Django project, the HTML couldn't be tested via the site's URL, due to Django tags and Jinja templating language in HTML files. Instead, the source code of each page was pasted into the validator directly.<br>
+**Home Page** : No errors or warnings to show.
+![Home Page](/media/images/w3c_validator_home_page.png)
+**Event Detail Page**: No errors or warnings to show.
+![Event Detail Page](/media/images/w3c_validator_event_detail_page.png)
+**Event Registeration Page**: No errors or warnings to show.
+![Event Registeration Page](/media/images/w3c_validator_event_registeration_page.png)
+**Category Page**: No errors or warnings to show.
+![Category Page](/media/images/w3c_validator_category_page.png)
+**Profile Page**: No errors or warnings to show.
+![Profile Page](/media/images/w3c_validator_profile_page.png)
+**Logout Page**: No errors or warnings to show.
+![Logout Page](/media/images/w3c_validator_logout_page.png)
+**Register Page**: No errors or warnings to show.
+![Register Page](/media/images/w3c_validator_register_page.png)
+**Login Page**: No errors or warnings to show.
+![Login Page](/media/images/w3c_validator_login_page.png)
+
+#### CSS Jigsaw Validator
+No errors were found when passing through the official W3C CSS.
+![STYLE CSS](/media/images/jigsaw_css_validator.png)
+
+
+#### Jshint Validator
+No errors were found when passing through the JSHint.
+  ![JSHint validator comments.js](/media/images/jshint_comments.png)
+
 ### Development Testing
 
 - __Starting Options__
-  - The app started successfully using the Run Program button with the title formated with art library and font "cybermedium" and with 2 lines text describing the app's purpose. Subsequently followed by the main menu options.
+  - The app started successfully using the Run Program button with the title formatted with art library and font "cybermedium" and with 2 lines of text describing the app's purpose. Subsequently followed by the main menu options.
   - Select "Current Weather" or "Forecast Weather", or "Weather Comparison" or "Exit§ option to direct to the relevant section.
     <br><br>
 - __Current Weather__
@@ -376,19 +459,6 @@ Further features inclusive (cited above) to implement are:
   - **To keep security sensitive information hidden.**
 
     - The Open Weather API key is stored as an environment variable in Heroku project config vars and testing API key added to gitignore file.
-
-### Validator Testing 
-
-- Python
-  - Each Python file was passed through the Code Institute Linter. After refactoring, the code was passed through the linter again and the results are shown below.
-    - The current_weather.py file was passed through the linter with no warnings or errors returned.
-  ![Current Weather File PEP8 Results](views/README_files/current_weather_pep8.png)<br><br> 
-     - The forecast_weather.py file was passed through the linter with no warnings or errors returned.
-  ![Forecast Weather File PEP8 Results](views/README_files/forecast_weather_pep8.png)<br><br> 
-    - The weather_comparison.py file was passed through the linter with no warnings or errors returned.
-  ![Weather Comparison File PEP8 Results](views/README_files/weather_comparison_pep8.png)<br><br> 
-    - The run.py file was passed through the linter and few long line warnings returned due to conditional statements being used and couldn't find the desired solution to meet them.
-  ![Run File PEP8 Results](views/README_files/run_pep8.png)<br><br>  
 
 <a href="#contents">BACK TO CONTENTS 🔼</a>
 

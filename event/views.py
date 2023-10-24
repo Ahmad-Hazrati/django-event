@@ -17,30 +17,9 @@ def eventlist(request):
     events = p.get_page(page)
     nums = "a" * events.paginator.num_pages
     return render(
-        request, "home.html", {"event_list": event_list, "events": events, "nums": nums}
+        request, "home.html",
+        {"event_list": event_list, "events": events, "nums": nums}
     )
-
-
-# class EventList(generic.ListView):
-#     """
-#     A generic list view to disply the event lists.
-#     """
-#     model = Event
-#     queryset = Event.objects.filter(status=1).order_by('-created_on')
-#     template_name = 'home.html'
-#     paginate_by = 3
-
-# def get_context_data(self, *args, **kwargs):
-#     # cat_menu = Category.objects.all()
-#     context = super(EventList, self).get_context_data(*args, **kwargs)
-#     # context ['cat_menu'] = cat_menu
-#     return context
-
-# def get_context_data(self, *args, **kwargs):
-#     category_events = Category.objects.all()
-#     context = super(EventList, self).get_context_data(*args, **kwargs)
-#     context['category_events'] = category_events
-#     return context
 
 
 def event_detail(request, slug, *args, **kwargs):
@@ -99,8 +78,12 @@ def event_like(request, slug, *args, **kwargs):
     if request.method == "POST" and request.user.is_authenticated:
         if post.likes.filter(id=request.user.id).exists():
             post.likes.remove(request.user)
+            messages.add_message(
+                request, messages.SUCCESS, "You unliked this event!")
         else:
             post.likes.add(request.user)
+            messages.add_message(
+                request, messages.SUCCESS, "You like this event!")
 
     return HttpResponseRedirect(reverse("event_detail", args=[slug]))
 
@@ -110,7 +93,8 @@ def registeration_confirmation(request, slug):
     if request.method == "POST":
         event.participants.add(request.user)
         messages.add_message(
-            request, messages.SUCCESS, "You have successfully registered to the event!"
+            request, messages.SUCCESS,
+            "You have successfully registered to the event!"
         )
         return redirect("event_detail", slug)
 
@@ -119,8 +103,6 @@ def registeration_confirmation(request, slug):
 
 def comment_delete(request, slug, comment_id, *args, **kwargs):
     """View to delete comment"""
-    # queryset = Event.objects.filter(status=1)
-    # post = get_object_or_404(queryset)
     comment = Comment.objects.get(id=comment_id)
 
     if comment.name == request.user.username:
@@ -151,7 +133,8 @@ def comment_edit(request, slug, comment_id, *args, **kwargs):
             comment.save()
             messages.add_message(request, messages.SUCCESS, "Comment Updated!")
         else:
-            messages.add_message(request, messages.ERROR, "Error updating comment!")
+            messages.add_message(
+                request, messages.ERROR, "Error updating comment!")
 
     return HttpResponseRedirect(reverse("event_detail", args=[slug]))
 
@@ -172,7 +155,8 @@ def CategoryView(request, cats):
 
 def search_events(request):
     """
-    View to list the events based on the matching keyword typed in the search bar.
+    View to list the events based on the matching keyword
+    typed in the search bar.
     """
     if request.method == "POST":
         search = request.POST["search"]

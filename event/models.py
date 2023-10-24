@@ -38,14 +38,16 @@ class Event(models.Model):
     featured_image = CloudinaryField("image", default="placeholder")
     excerpt = models.TextField(blank=True)
     venue = models.CharField(max_length=150)
-    participants = models.ManyToManyField(User, blank=True, related_name="events")
+    participants = models.ManyToManyField(
+        User, blank=True, related_name="events")
     start_date = models.DateTimeField(null=True)
     end_date = models.DateTimeField(null=True)
     registeration_deadline = models.DateTimeField(null=True)
     updated = models.DateTimeField(auto_now=True)
     created_on = models.DateTimeField(auto_now_add=True)
     status = models.IntegerField(choices=STATUS, default=0)
-    likes = models.ManyToManyField(User, related_name="eventpost_like", blank=True)
+    likes = models.ManyToManyField(
+        User, related_name="eventpost_like", blank=True)
 
     class Meta:
         ordering = ["-created_on"]
@@ -58,7 +60,8 @@ class Event(models.Model):
 
 
 class Comment(models.Model):
-    post = models.ForeignKey(Event, on_delete=models.CASCADE, related_name="comments")
+    post = models.ForeignKey(
+        Event, on_delete=models.CASCADE, related_name="comments")
     name = models.CharField(max_length=80)
     email = models.EmailField()
     body = models.TextField()

@@ -27,8 +27,11 @@
             <div class="card-body">
                 <p class="card-text">{{ event.description | safe }}</p>
                 <p class="card-text"><strong>take place at/in </strong> {{ event.venue | safe }}</p>
-                <p class="card-text"><strong>From </strong>{{ event.start_date.date | safe }} {{event.start_date.time | safe }} <strong>till </strong>{{ event.end_date.date|safe }}  {{ event.end_date.time | safe}}</p>
-                <p class="card-text"><strong>And the registeration deadline is </strong>{{ event.registeration_deadline | safe }}</p>
+                <p class="card-text"><strong>From </strong>{{ event.start_date.date | safe }}
+                    {{event.start_date.time | safe }} <strong>till </strong>{{ event.end_date.date|safe }}
+                    {{ event.end_date.time | safe}}</p>
+                <p class="card-text"><strong>And the registeration deadline is
+                    </strong>{{ event.registeration_deadline | safe }}</p>
                 <hr>
                 <div class="row">
                     <div class="col-1">
@@ -53,10 +56,11 @@
             </div>
         </div>
     </div>
-<form action="" method="POST" class="mb-4">
-    {% csrf_token %}
-    <a class="btn btn-outline-primary" href="{% url 'event_detail' event.slug %}">Back</a>
-    <button type="submit" value="Confimr" class="btn btn-outline-primary">Confirm</button>
-</form>
+    <form method="POST" class="mb-4">
+        {% csrf_token %}
+        <a class="btn btn-outline-primary" href="{% url 'event_detail' event.slug %}">Back</a>
+        <button type="submit" value="Confimr" class="btn btn-outline-primary">Confirm</button>
+    </form>
+</div>
 
 {% endblock %}
