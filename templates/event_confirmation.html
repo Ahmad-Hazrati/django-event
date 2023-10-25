@@ -25,7 +25,7 @@
     <div class="row">
         <div class="col card mb-4 mt-3 left top">
             <div class="card-body">
-                <p class="card-text">{{ event.description | safe }}</p>
+                <div class="card-text">{{ event.description | safe }}</div>
                 <p class="card-text"><strong>take place at/in </strong> {{ event.venue | safe }}</p>
                 <p class="card-text"><strong>From </strong>{{ event.start_date.date | safe }}
                     {{event.start_date.time | safe }} <strong>till </strong>{{ event.end_date.date|safe }}

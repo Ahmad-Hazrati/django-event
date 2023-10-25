@@ -26,7 +26,7 @@
     <div class="row">
         <div class="col card mb-4 mt-3 left top">
             <div class="card-body">
-                <p class="card-text">{{ post.description | safe }}</p>
+                <div class="card-text">{{ post.description | safe }}</div>
                 <p class="card-text"><strong>take place at/in </strong> {{ post.venue | safe }}</p>
                 <p class="card-text"><strong>From </strong>{{ post.start_date.date | safe }} {{post.start_date.time | safe }} <strong>till </strong>{{ post.end_date.date|safe }}  {{ post.end_date.time | safe}}</p>
                 <p class="card-text"><strong>And the registeration deadline is </strong>{{ post.registeration_deadline | safe }}</p>

@@ -162,10 +162,10 @@ Wireframe is used to plan and sketch the website.
 - [Logout Page. Desktop Screen](/media/images/logout_page_desktop.png)
 
 #### Database
-PostgreSQL relational database is used to store the website data. 
+PostgreSQL relational database is used to store the website data. The database model diagram is designed using [Lucidchart](https://lucid.app/).
 <details>
   <summary>Database Schema</summary>
-<img src="/media/images/database_models.png"><br>
+<img src="media/images/database_erd_model.png"><br>
 </details>
 
 ### Surface (Design)
@@ -227,14 +227,14 @@ All user stories implementation progress was registered using [socialfun_project
   - The event in the category page is navigable and prompt the user to the event detail page once selected.
   ![Category Page](/media/images/category_page.png)<br><br>
 - __Profile Page__ 
-  - The profile page is only visible to authorized user and comprises of profile properties, an edit button and latest events created by the user.
-  - The user can edit its profile avatar and bio in here.
+  - The profile page is only visible to authorized user and comprises profile properties, an edit button, and the latest events created by the user.
+  - The user can edit their profile avatar and bio here.
   ![Profile Page](/media/images/profile_page.png)<br><br>
 - __Logout Page__ 
-  - The logout page is only visible to authorized user and allows the user to logout securely from the website.
+  - The logout page is only visible to authorized users and allows the user to logout securely from the website.
   ![Logout Page](/media/images/logout_page.png)<br><br>
 - __Register Page__ 
-  - The register page is only visible to unauthorized user and allows the user to create an account and securely access the website.
+  - The register page is only visible to unauthorized users and allows the user to create an account and securely access the website.
   - The page allows the user to fill out the form and sign up. The page includes a login button to navigate the user to login page in case already has an account.
   ![Register Page](/media/images/register_page.png)<br><br>
 - __Login Page__ 
@@ -284,6 +284,7 @@ Further features inclusive (cited above) to implement are:
 [Summernote](https://summernote.org/): used to online editors.<br>
 [PostgreSQL](https://www.elephantsql.com/): used to store the website data.<br>
 [Balsamiq](https://balsamiq.com/wireframes/): used to sketch the project contents.<br>
+[Lucid](https://lucid.app/): used to design the database model.<br>
 [TinyPNG](https://tinypng.com/): used to compress the images.<br>
 [Favicon.io](https://favicon.io/): used to generate the website favicon.<br>
 [Font Awesome](https://fontawesome.com/): used for creating attractive UX with icons.<br>
@@ -355,12 +356,16 @@ Google Chrome lighthouse checks and generates a comprehensive report regarding t
 As this is a Django project, the HTML couldn't be tested via the site's URL, due to Django tags and Jinja templating language in HTML files. Instead, the source code of each page was pasted into the validator directly.<br>
 **Home Page**: No errors or warnings to show.
 ![Home Page](/media/images/w3c_validator_home_page.png)
-**Event Detail Page**: No errors or warnings to show.
+**Event Detail Page**: 4 errors are returned.
 ![Event Detail Page](/media/images/w3c_validator_event_detail_page.png)
 **Fix**:
-- Remove the 
+- 1. Change the <p> element into <div> element as the closing </p> element was not readable by the validator.
+- 2. Remove the <strong> element.
+- 3. 
 **Event Registration Page**: No errors or warnings to show.
 ![Event Registration Page](/media/images/w3c_validator_event_registeration_page.png)
+**Fix**:
+- 1. Change the <p> element into <div> element as the closing </p> element was not readable by the validator.
 **Category Page**: No errors or warnings to show.
 ![Category Page](/media/images/w3c_validator_category_page.png)
 **Profile Page**: No errors or warnings to show.
