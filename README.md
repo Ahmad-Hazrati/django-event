@@ -1,8 +1,8 @@
 # Social Fun
 
-This project is designed and developed to create a better user experience for the users/members of a community. The users have the ability to register and log in to the site and view the events posted by the admin/community responsible person. The users are also able to register to events, like and comment on an event, and edit and delete their comments. The functionality of category & profile pages and search bar are also added for user convenience and better user experience.
+This project is designed and developed to create a better user experience for the users/members of a community. The users can register and log in to the site and view the events posted by the admin/community responsible person. The users are also able to register for events, like and comment on an event, and edit and delete their comments. The functionality of category & profile pages and search bar are also added for user convenience and better user experience.
 
-The website is created for real-life situations but embedded with fictitious data for checking purpose. The site is showcasing Python (Django framework), JavaScript, HTML, CSS, Bootstrap, PostgreSQL database, Herokuapp and Gitpod for Project Portfolio 4.
+The website is created for real-life situations but embedded with fictitious data for checking purposes. The site is showcasing Python (Django framework), JavaScript, HTML, CSS, Bootstrap, PostgreSQL database, Herokuapp, and Gitpod for Project Portfolio 4.
 
 And can be accessed by this [link.](https://socialfun-9d543c215b26.herokuapp.com/)
 
@@ -18,7 +18,7 @@ And can be accessed by this [link.](https://socialfun-9d543c215b26.herokuapp.com
     - [Simple and intuitive User Experience](#simple-and-intuitive-user-experience)
     - [Relevant content](#relevant-content)
     - [Features for upgraded experience](#features-for-upgraded-experience)
-    - [Different account types for Participants and staff members or Admin](#different-account-types-for-participants-and-staff-members-or-admin)
+    - [Different account types for Participants and staff members / Admin](#different-account-types-for-participants-and-staff-members--admin)
     - [Responsiveness](#responsiveness)
   - [Structure](#structure)
   - [Skeleton](#structure)
@@ -64,24 +64,23 @@ And can be accessed by this [link.](https://socialfun-9d543c215b26.herokuapp.com
 
 ## UX
 ### Strategy
-The objective of the site is to provide a common platform for all user to view and register to community events. The site allows users to share their thoughts, leave comments through commenting and liking/unliking events. 
+The objective of the site is to provide a common platform for all users to view and register for community events. The site allows users to share their thoughts, and leave comments through commenting and liking/unliking events. 
 #### User Stories
-- User Goals:
+- **User Goals**:
   - As a Site User I can find the navigation items so that I can navigate the site easily.
   - As a Site User I can view a paginated list of events so that I select an event to view.
   - As a Site User I can view a list of events so that I can select one to check for more details.
   - As a Site User I can click on an event so that I can read the full content.
-  - As a Site User / Admin I can view the number of likes on each event so that I can see which is the most popular or viral.
+  - As a Site User / Admin I can view the number of likes on each event so that I can see which is the most viral.
   - As a Site User / Admin I can view the number of participants on each event so that I can view how many people have registered for the event.
-  - As a Site User I can register an account so that I can comment, like and participate to events.
+  - As a Site User I can register an account so that I can comment, like, and participate in events.
   - As a Site User I can login & logout of the site so that I can access the site securely.
   - As a Site User / Admin I can view comments on an individual event so that I can read the conversation.
   - As a Site User I can leave comments on an event so that I can be involved in the conversation.
   - As a Site User I can edit and delete my comments so that I revise/update and remove the contents.
   - As a Site User I can like or unlike an event so that I can interact with the content.
-  - As a Site User I can register to an event so that I can participate.
+  - As a Site User I can register for an event so that I can participate.
   - As a Site User I can click on the event category so that I can view the events for selected category.
-  - As a Site Admin I can create, edit, update and delete event categories so that I can manage the event categories.
   - As a Site User I can search for desired event so that I can find it more easily and quickly.
   - As a Site User I can view my profile so that I can check and update it.
   - As a Site User I can edit my profile so that I can keep it up-to-date.
@@ -89,63 +88,63 @@ The objective of the site is to provide a common platform for all user to view a
   - As a Site User I can receive different alert messages so that I know the status of different actions happened.
 <br>
 
-- Site Administrator Goals:
-  - As a Site Admin I can create, read, update and delete events so that I can manage the event content.
+- **Site Administrator Goals**:
+  - As a Site Admin I can create, read, update, and delete events so that I can manage the event content.
+  - As a Site Admin I can create, edit, update and delete event categories so that I can manage the event categories.
   - As a Site Admin I can create draft events so that I can finish writing the content later.
   - As a Site Admin I can approve or disapprove comments so that I can filter out objectionable comments.
   - To handle any potential errors appropriately and consistently.
-  - To keep security sensitive information hidden.
+  - To keep security-sensitive information hidden.
 
 ### Scope
 #### Simple and intuitive User Experience
- - Ensure the site title and logo provides the first hand information regarding the site;
+ - Ensure the site title and logo provide first-hand information regarding the site;
  - Ensure the navigation menu is visible and functional at every step;
- - Ensure every page has a suggestive name that fits the its content;
+ - Ensure every page has a suggestive name that fits its content;
  - Ensure the user will get visual feedback when navigating through pages;
- - Ensure the design matches the events theme and does not confuse the user.
+ - Ensure the design matches the theme of the event and does not confuse the user.
 
  #### Relevant content
- - Add information about event such as name, category, venue, description, author, participants, created_on, start_date, end_date, registeration_deadline and status;
+ - Add information about the event such as name, category, venue, description, author, participants, created_on, start_date, end_date, registeration_deadline, and status;
  - Create relevant navigation buttons for each section;
- - Create a section for comments, category and profile.
+ - Create a section for comments, categories, and profiles.
 
 #### Features for upgraded experience
-- Create a paginated list of events that allows user to view all events along with all its details;
-- Create an event detail page that allows user to like/unlike the event, register to an event, leave, edit and delete comments;
-- Create a category page with dropdown options that allows user to view all events related to selected category;
-- Create a profile page that allows user to view and edit his profile. The user can also view that how many events it has created and registered to;
+- Create a paginated list of events that allows the user to view all events along with all their details;
+- Create an event detail page that allows users to like/unlike the event, register for an event, leave, edit, and delete comments;
+- Create a category page with dropdown options that allow users to view all events related to the selected category;
+- Create a profile page that allows the user to view and edit his profile. The user can also view how many events it has created and registered to;
 - The search bar in the navigation area gives the user the ability to search for events quickly and easily.
 
-#### Different account types for Participants and staff members or Admin
-- Participants can register to events while the admin can add event, category and approve comments;
+#### Different account types for Participants and staff members / Admin
+- Participants can register for events while the admin can add events, and categories and approve comments;
 - Participants can like/unlike and leave comments on events; edit and delete their comments but the comments will be approved by the admin and will be published;
 - Participants have access only to their Profile page for managing it;
-- Staff members/ admin has access to admin panel to manage events, comments, category and both types of accounts.
+- Staff members/ admin has access to the admin panel to manage events, comments, category, and both types of accounts.
 
 #### Responsiveness
-- Create a responsive design for desktop, tablet and mobile devices.
+- Create a responsive design for desktop, tablet, and mobile devices.
 
 ### Structure
-The structure of the website is divided into nine pages but the content is depending on authentication and authorization of users.
+The structure of the website is divided into nine pages but the content depends on authentication and authorization of users.
 - **Register/Login** pages give the user the possibility to create an account and authenticate for accessing different features;
 - **Logout** feature is a modal that helps user to exit the site securely;
 - **Home** page is open and visible to all types of user irrespective of registeration and authorization and includes list of all events;
 - **Event Detail** page is visible only to logged-in user and displays the detail of selected event. The page also allows user to like/unlike and register to an event. The user also has the ability to leave, edit and delete comments related to the event;
-- **Registeration Confirmation** page is visible only to logged-in user and allows the user to complete the event registeration process.
+- **The Registration Confirmation** page is visible only to logged-in user and allows the user to complete the event registeration process.
 - **Event Category** page is visible only to logged-in user and allows the user to view the list of events for a selected category.
 - **Profile** page is visible only to logged-in user and allows the user to view and update its contents.
-- **Search Bar** feature is visible to all users and allows the user to search for matching events based on the typed characters. But the actual link to display the details of the event is only visible to logged-in user.
-- **Admin Panel** page is visible only to staff members with admin rights / admin to manage the events, comments, category, profile and user accounts.
+- **Search Bar** feature is visible to all users and allows the user to search for matching events based on the typed characters. However, the actual link to display the details of the event is only visible to logged-in users.
+- **The Admin Panel** page is visible only to staff members with admin rights/admin to manage the events, comments, category, profile, and user accounts.
 
 ### Skeleton
-
 #### Wireframes
 Wireframe is used to plan and sketch the website.
 
 ##### Mobile Devices
 - [Home Page. Mobile Screen](/media/images/home_page_mobile.png)
 - [Event Detail Page. Mobile Screen](/media/images/event_detail_page_mobile.png)
-- [Event Registeration Confirmation Page. Mobile Screen](/media/images/registeration_confirmation_mobile.png)
+- [Event Registration Confirmation Page. Mobile Screen](/media/images/registeration_confirmation_mobile.png)
 - [Category Page. Mobile Screen](/media/images/category_page_mobile.png)
 - [Profile Page. Mobile Screen](/media/images/profile_page_mobile.png)
 - [Sign Up Page. Mobile Screen](/media/images/signup_page_mobile.png)
@@ -166,15 +165,15 @@ Wireframe is used to plan and sketch the website.
 PostgreSQL relational database is used to store the website data. 
 <details>
   <summary>Database Schema</summary>
-<img src="/media/images/database_models.png" ><br>
+<img src="/media/images/database_models.png"><br>
 </details>
 
 ### Surface (Design)
 #### Color Scheme
 All colors were selected with the eyedropper plugin from the website logo to maintain chromatic harmony.
-- Radial-gradient (circle at 74.2% 50.9%, rgb(14, 72, 222) 5.2%, rgb(3, 22, 65) 75.3%) is used as the main color for the header and footer sections.<br>
+- Radial-gradient (circle at 74.2% 50.9%, rgb(14, 72, 222) 5.2%, RGB (3, 22, 65) 75.3%) is used as the main color for the header and footer sections.<br>
 ![#Blue Gradient](/media/images/gradient.png)
-- (#E84610) color is used as hover and active color for header and footer sections. The color is also used for delete buttons and links.<br>
+- (#E84610) color is used as hover and active color for header and footer sections. The color is also used for deleting buttons and links.<br>
 ![#E84610](/media/images/e84610.png)
 - (#0D6EFD) is used as text color for event heading and description, for buttons except indicated separately, and for image flash.<br>
 ![#0D6EFD](/media/images/0d6efd.png)
@@ -200,20 +199,19 @@ All colors were selected with the eyedropper plugin from the website logo to mai
 
 ## Agile Methodology
 This project was developed using the Agile methodology.
-All user stories implementation progress was registered using [socialfun_project](https://github.com/users/Ahmad-Hazrati/projects/6). As the user stories were accomplished, they were moved from the board **To Do**, to **Progress** and finally to **Done** lists.
+All user stories implementation progress was registered using [socialfun_project](https://github.com/users/Ahmad-Hazrati/projects/6). As the user stories were accomplished, they were moved from the kanban board **To Do**, to **Progress** and finally to **Done** lists.
 
 ## Features 
-
 ### Existing Features
 
 - __Home Page__ 
-  - When the website loads, the home page will loads as well as default page to all users wheather authenticated or not. 
-  - The home page is paginated and contains list of all events published by the authorized community user / admin. 
-  - The event's name, author, excerpt, image, date created on and number of likes are displayed in the home page. 
-  - If the user is authenticated then the event name and excerpt will be an active navigate link to the event detail page. 
+  - When the website loads, the home page will load as well as the default page to all users whether authenticated or not. 
+  - The home page is paginated and contains list of all events published by the authorized community user/admin. 
+  - The event's name, author, excerpt, image, date created, and number of likes are displayed on the home page. 
+  - If the user is authenticated then the event name and excerpt will be an active navigational link to the event detail page. 
   ![Home Page](/media/images/home_page.png)<br><br>
 - __Event Detail Page__ 
-  - This page is only visible to authorized user and contains all details of the event. 
+  - This page is only visible to authorized users and contains all details of the event. 
   - The page also contains the event registeration link and comment sections. 
   - The registeration button is visible in case the user has not yet registered to the event, otherwise, registeration confirmation message will be displayed.
   - The user can leave, read, edit and delete comments. 
@@ -355,12 +353,14 @@ Google Chrome lighthouse checks and generates a comprehensive report regarding t
 
 #### HTML W3C Validator
 As this is a Django project, the HTML couldn't be tested via the site's URL, due to Django tags and Jinja templating language in HTML files. Instead, the source code of each page was pasted into the validator directly.<br>
-**Home Page** : No errors or warnings to show.
+**Home Page**: No errors or warnings to show.
 ![Home Page](/media/images/w3c_validator_home_page.png)
 **Event Detail Page**: No errors or warnings to show.
 ![Event Detail Page](/media/images/w3c_validator_event_detail_page.png)
-**Event Registeration Page**: No errors or warnings to show.
-![Event Registeration Page](/media/images/w3c_validator_event_registeration_page.png)
+**Fix**:
+- Remove the 
+**Event Registration Page**: No errors or warnings to show.
+![Event Registration Page](/media/images/w3c_validator_event_registeration_page.png)
 **Category Page**: No errors or warnings to show.
 ![Category Page](/media/images/w3c_validator_category_page.png)
 **Profile Page**: No errors or warnings to show.
@@ -380,6 +380,8 @@ No errors were found when passing through the official W3C CSS.
 #### Jshint Validator
 No errors were found when passing through the JSHint.
   ![JSHint validator comments.js](/media/images/jshint_comments.png)
+  ![JSHint validator message_box](/media/images/jshint_message_box.png)
+
 
 ### Manual Testing
 
@@ -396,58 +398,16 @@ No errors were found when passing through the JSHint.
   - The functionality to edit and delete a comment works without any issue. The buttons only visible to the authorized user / user own the comment.
   - The event registration page loads successfully and registration functions as expected. 
   - The event categories are updated and loaded normally. The filtered events by category are listed and displayed without issue.
-  - The profile page loads normally. It displays the user information and image without any issues. The form to edit the profile image and bio also works properly.<br><br>
+  - The profile page loads normally. It displays the user information and image without any issues. The form to edit the profile image and bio also works properly.
 
 - __Backend / Admin Panel__
   - The admin panel has been tested repeatedly without any issues. 
   - All models are working properly.
   - The admin user can perform CRUD operation on all models (event, comment, category, and profile) without any issue.
   - The admin user can approve comments and publish events.
-  <br><br>
 
 ### Testing User Stories
-#### User Goals
-- **To check the current weather of a location / city.**
-  - The app prompts the user to enter the name of any geographical location / city to display the current weather condition. 
-  - The app then presents the data back to the user, fulfilling the requirements of this user goal.
-
-- **To check the next 5 days weather forecast for any geographical location/ city.**
-
-  - The user is prompted to enter the name of any geographical location / city to display the forecast weather for next 5 days. 
-  - The user is then presented with the 5 days forecasts weather, achieving the objective of this goal.
-
-- **To see the weather condition comparison result of 2 different locations/ cities.**
-
-  - The user is prompted to enter the names of any geographical locations / cities to display the weather condition with a compared weather condition result. 
-  - The user is then presented with the output, fulfilling this goal.
-
-#### Site Administrator Goals
-  - **To give users the options to check current weather, weather forecasts and weather comparison result of 2 different locations / cities from the terminal.**
-
-    - The user can access current weather, forecast weather and weather comparison result data via via Open Weather API.
-
-  - **To give users the ability to navigate through options back and forth easily.**
-
-    - The menu and sub-menu options allows the user to go back and forth and experience different sections of the app.
-
-  - **To present data in more user friendly format as possible within the constraints of the terminal.**
-
-    - The font format, menu options, display data with a break of 1-2 seconds and validating the user inputs are some of the measures in this regard.
-
-    - **To create an application using Python with clean, resuable and commented code, utilising different functions and libraries.**
-
-    - code has been broken into discrete files to try and group together code in an ordered manner that seeks to follow the flow of the program.
-    - The code has been broken into discrete files to try and group together code in an ordered manner that seeks to follow the flow of the program.
-    - The functions have been written in a way such that they are atomic and perform discrete operations. The fun.py file has many examples of function calls in order to create the end result.
-    - Code is commented throughout to provide future proofing and all functions are annotated with a docstring.
-
-  - **To handle any potential errors appropriately and consistently.**
-
-    - Throughout the app there are multiple points where error handling is required. This is achieved through try/except in most cases along with if/else statements. 
-
-  - **To keep security sensitive information hidden.**
-
-    - The Open Weather API key is stored as an environment variable in Heroku project config vars and testing API key added to gitignore file.
+User Stories are fully achieved. They are discussed in [**User Stories**](#user-stories) section under **Strategy** and for more details please refer to [Github Repository](https://github.com/users/Ahmad-Hazrati/projects/6/views/1).
 
 <a href="#contents">BACK TO CONTENTS 🔼</a>
 
