@@ -1,6 +1,6 @@
 # Social Fun
 
-This project is designed and developed to create a better user experience for the users / members of a community. The users has the ability to register and login to the site and view the events posted by the admin / community responsible person. The users are also able to register to events, like and comment on an event, edit and delete their comments. The functionality of category & profile pages and search bar are also added for user convenience and better user experience.
+This project is designed and developed to create a better user experience for the users/members of a community. The users have the ability to register and log in to the site and view the events posted by the admin/community responsible person. The users are also able to register to events, like and comment on an event, and edit and delete their comments. The functionality of category & profile pages and search bar are also added for user convenience and better user experience.
 
 The website is created for real-life situations but embedded with fictitious data for checking purpose. The site is showcasing Python (Django framework), JavaScript, HTML, CSS, Bootstrap, PostgreSQL database, Herokuapp and Gitpod for Project Portfolio 4.
 
@@ -43,7 +43,9 @@ And can be accessed by this [link.](https://socialfun-9d543c215b26.herokuapp.com
     - [HTML W3C Validator](#html-w3c-validator)
     - [CSS Jigsaw Validator](#css-jigsaw-validator)
     - [Jshint Validator](#jshint-validator)
-  - [Development Testing](#development-testing)
+  - [Manual Testing](#manual-testing)
+    - [Frontend](#frontend)
+    - [Backend / Admin Panel](#backend--admin-panel)
   - [Testing User Stories](#testing-user-stories)
      - [User Goals](#user-goals)
      - [Site Administrator Goals](#site-administrator-goals)
@@ -259,13 +261,13 @@ Further features inclusive (cited above) to implement are:
 ## Technologies Used
 
 ### Languages Used
-- **Python, JavaScript, HTML and CSS** are used extensively during project.
+- **Python, JavaScript, HTML, and CSS** are used extensively during the project.
 - **Markdown**: Used exclusively for README.
 
 ### Python Packages
 - **django**
 - **gunicorn**
-- **dj-database-url**
+- **dj-database-URL**
 - **psycopg2**
 - **dj3-cloudinary-storage**
 - **whitenoise**
@@ -379,42 +381,29 @@ No errors were found when passing through the official W3C CSS.
 No errors were found when passing through the JSHint.
   ![JSHint validator comments.js](/media/images/jshint_comments.png)
 
-### Development Testing
+### Manual Testing
 
-- __Starting Options__
-  - The app started successfully using the Run Program button with the title formatted with art library and font "cybermedium" and with 2 lines of text describing the app's purpose. Subsequently followed by the main menu options.
-  - Select "Current Weather" or "Forecast Weather", or "Weather Comparison" or "Exit§ option to direct to the relevant section.
-    <br><br>
-- __Current Weather__
-  - The current weather page loaded successfully prompting the user for input. 
-  - When the input is correct, the current weather is displayed. 
-  - The sub-menu option is presented afterwards with each one working satisfactorily. 
-  - Various errors were purposefully entered into the terminal to check the app response as detailed below:
-  - *Non-alphabet / letter entry*: a variety of non-letter entries were made with the expected response detailed below: ![Invalid Input](views/README_files/invalid_input.png).
-    A while loop is run to reprompt the user until enters the valid input.
-  - *Invalid City Name*: a number of incorrect city names were typed to test and the response are detailed below: ![Invalid City Name](views/README_files/invalid_city_name.png).
-   <br><br>
-- __Forecast Weather__
-  - - The forecast weather page loaded successfully prompting the user for input. 
-  - When the input is correct, the forecast weather is displayed. 
-  - The sub-menu option is presented afterwards with each one working satisfactorily. 
-  - Various errors were purposefully entered into the terminal to check the app response as detailed below:
-  - *Non-alphabet / letter entry*: a variety of non-letter entries were made with the expected response detailed below: ![Invalid Input](views/README_files/invalid_input.png).
-    A while loop is run to reprompt the user until enters the valid input.
-  - *Invalid City Name*: a number of incorrect city names were typed to test and the response are detailed below: ![Invalid City Name](views/README_files/invalid_city_name.png).
+- __Frontend__
+  - The header loads and functions properly. The navigation bar sticks to the top of the page and is always accessible to the user. The navigation items, links, dropdown menus, and search bar work and function as expected.
+  - The footer loads and functions properly. The social links open in a new tab and navigate the user to the right page.
+  - The home page is displayed as default page when the website loads and allows the user to register or login to the website.
+  - The events are displayed with correct format and design as expected.
+  - The pagination functionality on the home page works without any issue. It adds another pages after 3 events on the page.
+  - The signup, login, and logout functionalities are working and have no issues. It shows the right interactive message to the user.
+  - The event detail page loads normally when the user clicks the link to the event detail page.
+  - The functionalities to like/unlike and register to an event are working properly and displays the right interactive message to the user.
+  - The comment form has no issues and it submits a new comment once the form is completed by a registered user. The comment is displayed once the submit button is pressed. The interactive message for this action is working without errors.
+  - The functionality to edit and delete a comment works without any issue. The buttons only visible to the authorized user / user own the comment.
+  - The event registration page loads successfully and registration functions as expected. 
+  - The event categories are updated and loaded normally. The filtered events by category are listed and displayed without issue.
+  - The profile page loads normally. It displays the user information and image without any issues. The form to edit the profile image and bio also works properly.<br><br>
+
+- __Backend / Admin Panel__
+  - The admin panel has been tested repeatedly without any issues. 
+  - All models are working properly.
+  - The admin user can perform CRUD operation on all models (event, comment, category, and profile) without any issue.
+  - The admin user can approve comments and publish events.
   <br><br>
-- __Weather Comparison__
-   - The weather comparison page loaded successfully prompting the user for inputs. 
-  - When the inputs are correct, the weather information is displayed with the result of compared weather conditions. 
-  - The sub-menu option is presented afterwards with each one working satisfactorily. 
-  - Various errors were purposefully entered into the terminal to check the app response as detailed below:
-  - *Non-alphabet / letter entry*: a variety of non-letter entries were made with the expected response detailed below: ![Invalid Input](views/README_files/invalid_input.png).
-    A while loop is run to reprompt the user until enters the valid input.
-  - *Invalid City Name*: a number of incorrect city names were typed to test and the response are detailed below: ![Invalid City Name](views/README_files/invalid_city_name.png).
-   <br><br>
-- __User Options__
-  - The two User Options formats - main menu and and sub-menu - were both presented at the appropriate time: current weather, forecast weather, and weather comparison respectively.
-  - Each option was selected to confirm direction to the appropriate part of the app.
 
 ### Testing User Stories
 #### User Goals

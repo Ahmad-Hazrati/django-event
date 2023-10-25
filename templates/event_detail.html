@@ -33,11 +33,10 @@
                 <hr>
                 <div class="row">
                     <div class="col-1">
-                        <strong>
                             {% if user.is_authenticated %}
                             <form class="d-inline" action="{%url 'event_like' post.slug %}" method="POST">
                                 {% csrf_token %}
-                                {{ form|crispy }}
+                                {{ form|safe }}
                                 {% if liked %}
                                 <button class="btn-like" type="submit" name="eventpost_id" value="{{post.slug}}"
                                     aria-label="like">
@@ -54,7 +53,6 @@
                             <span class="text-secondary"><i class="far fa-heart"></i></span>
                             {% endif %}
                             <span class="text-secondary">{{ post.number_of_likes }}</span>
-                        </strong>
                     </div>
                     <div class="col-1">
                         <strong class="text-secondary"><i class="far fa-comments"></i>

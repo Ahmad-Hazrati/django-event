@@ -83,7 +83,7 @@ def event_like(request, slug, *args, **kwargs):
         else:
             post.likes.add(request.user)
             messages.add_message(
-                request, messages.SUCCESS, "You like this event!")
+                request, messages.SUCCESS, "You liked this event!")
 
     return HttpResponseRedirect(reverse("event_detail", args=[slug]))
 
