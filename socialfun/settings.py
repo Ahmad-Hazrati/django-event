@@ -45,19 +45,20 @@ INSTALLED_APPS = [
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
+    "django.contrib.staticfiles",
     "django.contrib.sites",
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
-    "django.contrib.staticfiles",
-    "cloudinary_storage",
-    "cloudinary",
+
     # Apps
     "event",
     "profiles",
     # Others
     "django_summernote",
     "djrichtextfield",
+    "cloudinary",
+    "cloudinary_storage",
     "crispy_forms",
     "crispy_bootstrap4",
 ]
@@ -91,8 +92,8 @@ DJRICHTEXTFIELD_CONFIG = {
 
 MIDDLEWARE = [
     "allauth.account.middleware.AccountMiddleware",
-    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.middleware.security.SecurityMiddleware",
+    "whitenoise.middleware.WhiteNoiseMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
@@ -186,7 +187,7 @@ ACCOUNT_AUTHENTICATION_METHOD = "username_email"
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_USERNAME = True
 ACCOUNT_EMAIL_VERIFICATION = "none"
-ACCOUNT_USERNAME_MIN_LENGTH = 5
+ACCOUNT_USERNAME_MIN_LENGTH = 4
 LOGIN_URL = "/accounts/login/"
 LOGIN_REDIRECT_URL = "/"
 
