@@ -355,29 +355,31 @@ Google Chrome lighthouse checks and generates a comprehensive report regarding t
 #### HTML W3C Validator
 As this is a Django project, the HTML couldn't be tested via the site's URL, due to Django tags and Jinja templating language in HTML files. Instead, the source code of each page was pasted into the validator directly.<br>
 **Home Page**: No errors or warnings to show.
-![Home Page](/media/images/w3c_validator_home_page.png)<br>
+![Home Page](/media/images/w3c_validator_home_page.png)<br><br>
 **Event Detail Page**: 4 errors are returned.
 ![Event Detail Page](/media/images/w3c_validator_event_detail_page.png)
 **Fix**:
 - 1. Change the **p** element into **div** element as the validator did not read the closing **p** element.<br>
 - 2. Remove the <strong> element.
-- 3. <br>
+- 3. Add a data attribute to the comment_id of Delete button.
+- 4. Add a data attribute to the comment_id of Edit button.<br><br>
 **Event Registration Page**: No errors or warnings to show.
-![Event Registration Page](/media/images/w3c_validator_event_registeration_page.png)<
+![Event Registration Page](/media/images/w3c_validator_event_registeration_page.png)
 **Fix**:
-- 1. Change the **p** element into **div** element as the validator did not read the closing **p** element.<br>
+- 1. Change the **p** element into **div** element as the validator did not read the closing **p** element.<br><br>
 **Category Page**: No errors or warnings to show.
-![Category Page](/media/images/w3c_validator_category_page.png)<br>
+![Category Page](/media/images/w3c_validator_category_page.png)<br><br>
 **Profile Page**: No errors or warnings to show.
-![Profile Page](/media/images/w3c_validator_profile_page.png)<br>
+![Profile Page](/media/images/w3c_validator_profile_page.png)<br><br>
 **Logout Page**: No errors or warnings to show.
-![Logout Page](/media/images/w3c_validator_logout_page.png)<br>
+![Logout Page](/media/images/w3c_validator_logout_page.png)<br><br>
 **Register Page**: No errors or warnings to show.
 ![Register Page](/media/images/w3c_validator_register_page.png)
 
-<br>
+<br><br>
+
 **Login Page**: No errors or warnings to show.
-![Login Page](/media/images/w3c_validator_login_page.png)<br>
+![Login Page](/media/images/w3c_validator_login_page.png)<br><br>
 
 #### CSS Jigsaw Validator
 No errors were found when passing through the official W3C CSS.
