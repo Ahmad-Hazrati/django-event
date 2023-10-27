@@ -375,7 +375,8 @@ As this is a Django project, the HTML couldn't be tested via the site's URL, due
 ![Logout Page](/media/images/w3c_validator_logout_page.png)<br><br>
 **Register Page**: No errors or warnings to show.
 ![Register Page](/media/images/w3c_validator_register_page.png)
-
+**Fix**:
+- 1. The fix was not possible as the file was not accessible for edit.
 <br><br>
 
 **Login Page**: No errors or warnings to show.
