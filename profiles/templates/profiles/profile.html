@@ -10,7 +10,7 @@
     <div class="profile">
         <div class="info">
             <div class="profile-img text-center">
-                {% if "placeholder" in image.url %}
+                {% if "placeholder" in profile.image.url %}
                 <img src="{% static 'images/default_profile_img.png' %}" alt="placeholder">
                 {% else %}
                 <img src="{{ profile.image.url }}" alt="{{ profile.user.username}}'s profile image">

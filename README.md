@@ -429,6 +429,22 @@ User Stories are fully achieved. They are discussed in [**User Stories**](#user-
    <th>Solution</th>
    </tr>
    <tr>
+   <td>The default profile image was not loading when a new user registered to the website.</td>
+   <td>The issue is rectified by adding the profile model name to image link.</td>
+   </tr>
+   <tr>
+   <td>Issue with JS error "Uncaught TypeError: Cannot read properties of null".</td>
+   <td>The issue is rectified by adding an if statement to the code to check the message and execute when it is not null.</td>
+   </tr>
+   <tr>
+   <td>After the image field was changed to Cloudinary the profile crushed and was not accessible by the admin and other users.</td>
+   <td>The issue was rectified by erasing the database data migrations both locally and in PostgreSQL and making new migrations.</td>
+   </tr>
+   <tr>
+   <td>Issue with JS error "Uncaught TypeError: Cannot read properties of null".</td>
+   <td>The issue is rectified by adding an if statement to the code to check the message and execute when it is not null.</td>
+   </tr>
+   <tr>
    <td>The website images were not loading from Cloudinary and displaying the error "Must supply API key"</td>
    <td>The issue is rectified by updating the Cloudinary URL in Heroku.</td>
    </tr>
